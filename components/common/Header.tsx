@@ -6,7 +6,7 @@ function Header() {
   return (
     <Styled.Root>
       <Styled.Logo src="assets/images/logo.svg" alt="Logo" />
-      <Styled.SiteName>발표시간-계산기</Styled.SiteName>
+      <Styled.SiteName>발표시간 - 계산기</Styled.SiteName>
     </Styled.Root>
   );
 }
@@ -18,6 +18,7 @@ const Styled = {
     display: flex;
     align-items: center;
     margin-top: 40px;
+    width: 100%;
   `,
   Logo: styled.img`
     margin-right: 16px;
