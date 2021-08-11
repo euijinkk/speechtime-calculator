@@ -14,6 +14,7 @@ function Options() {
       <button onClick={() => setMode("Basic")}>Basic Mode</button>
       <button onClick={() => setMode("Advanced")}>Advanced Mode</button>
       <button>Language: {language}</button>
+      {/* dropdown은 따로 컴포넌트 분리할까? */}
     </Styled.Root>
   );
 }
@@ -23,6 +24,7 @@ export default Options;
 const Styled = {
   Root: styled.section<{ mode: String }>`
     display: flex;
+    margin-bottom: 8px;
     width: 100%;
     button {
       margin-right: 8px;

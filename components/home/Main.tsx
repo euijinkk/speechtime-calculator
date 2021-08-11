@@ -1,12 +1,23 @@
 import React from "react";
 import styled from "@emotion/styled";
+import Description from "./Description";
+import ScriptContainer from "./ScriptContainer";
 
 function Main() {
-  return <div>123</div>;
+  return (
+    <Styled.Root>
+      <Description />
+      <ScriptContainer />
+    </Styled.Root>
+  );
 }
 
 export default Main;
 
 const Styled = {
-  Root: styled.main``,
+  Root: styled.main`
+    display: flex;
+    width: 100%;
+    height: 643px;
+  `,
 };
