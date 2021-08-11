@@ -18,6 +18,7 @@ const Styled = {
     display: flex;
     align-items: center;
     margin-top: 40px;
+    margin-bottom: 30px;
     width: 100%;
   `,
   Logo: styled.img`
