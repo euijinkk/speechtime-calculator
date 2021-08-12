@@ -6,6 +6,6 @@ export const modeState = atom<String>({
 });
 
 export const cpmState = atom<number>({
-  key: "modeState",
+  key: "cpmState",
   default: 430,
 });
