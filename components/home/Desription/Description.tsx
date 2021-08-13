@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import { colors } from "../../lib/constants/colors";
+import { colors } from "../../../lib/constants/colors";
 import { useRecoilValue } from "recoil";
-import { modeState } from "../../store";
-import BasicMode from "./BasicMode";
-import AdvancedMode from "./AdvancedMode";
+import { modeState } from "../../../store";
+import BasicMode from "./BasicMode/BasicMode";
+import AdvancedMode from "./AdvancedMode/AdvancedMode";
 
 function Description() {
   const mode = useRecoilValue(modeState);

@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { useRecoilState } from "recoil";
-import { cpmState } from "../../store";
-import { colors } from "../../lib/constants/colors";
+import { cpmState } from "../../../../store";
+import { colors } from "../../../../lib/constants/colors";
 
-function ScrollBar() {
+function ScrollBarConatiner() {
   const [cpm, setCpm] = useRecoilState(cpmState);
 
   return (
@@ -13,7 +13,7 @@ function ScrollBar() {
         <div>speed (Characters Per Minute)</div>
         <div>{cpm} cpm</div>
       </Styled.CpmContainer>
-      <Styled.ScrollContainer>
+      <Styled.ScrollBar>
         <input
           type="range"
           min="310"
@@ -25,12 +25,12 @@ function ScrollBar() {
           list="tickmarks"
           onChange={(e) => setCpm(Number(e.target?.value))}
         />
-      </Styled.ScrollContainer>
+      </Styled.ScrollBar>
     </Styled.Root>
   );
 }
 
-export default ScrollBar;
+export default ScrollBarConatiner;
 
 const Styled = {
   Root: styled.div`
@@ -55,7 +55,7 @@ const Styled = {
       font-weight: bold;
     }
   `,
-  ScrollContainer: styled.div`
+  ScrollBar: styled.div`
     display: flex;
     align-items: center;
     background-color: ${colors.gray_light};

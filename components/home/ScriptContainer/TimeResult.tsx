@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
-import { colors } from "../../lib/constants/colors";
-import { useSpeechTime } from "../../hooks/useSpeechTime";
+import { colors } from "../../../lib/constants/colors";
+import { useSpeechTime } from "../../../hooks/useSpeechTime";
 
 interface Props {
   text?: string;

@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import ScrollBarConatiner from "./ScrollBarConatiner";
-import SpeedTable from "./SpeedTable";
 
-function BasicMode() {
+function ScrollBarContent() {
   return (
     <>
       <Styled.SpeedText>
@@ -11,22 +10,15 @@ function BasicMode() {
         &nbsp;&nbsp;&nbsp;&nbsp;PT Time이 계산됩니다.
       </Styled.SpeedText>
       <ScrollBarConatiner />
-      <Styled.TableText>
-        ∙ 말하는 속도와 문장/ PPT 사이의 간격과 시간을 고려해보세요.
-      </Styled.TableText>
-      <SpeedTable />
     </>
   );
 }
 
-export default BasicMode;
+export default ScrollBarContent;
 
 const Styled = {
   SpeedText: styled.div`
     margin-bottom: 4px;
     line-height: 2;
-  `,
-  TableText: styled.div`
-    margin-bottom: 22px;
   `,
 };

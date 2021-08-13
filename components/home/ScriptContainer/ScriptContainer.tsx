@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import styled from "@emotion/styled";
-import { colors } from "../../lib/constants/colors";
+import { colors } from "../../../lib/constants/colors";
 import CountResult from "./CountResult";
 import { useState } from "react";
-import countWords from "../../lib/utils/countWords";
-import countBytes from "../../lib/utils/countBytes";
-import countCharacters from "../../lib/utils/countCharacters";
+import countWords from "../../../lib/utils/countWords";
+import countBytes from "../../../lib/utils/countBytes";
+import countCharacters from "../../../lib/utils/countCharacters";
 import TimeResult from "./TimeResult";
-import { useSpeechTime } from "../../hooks/useSpeechTime";
+import { useSpeechTime } from "../../../hooks/useSpeechTime";
 
 function ScriptContainer() {
   const [wordsNum, setWordsNum] = useState(0);
