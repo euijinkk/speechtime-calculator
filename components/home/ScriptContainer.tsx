@@ -6,6 +6,8 @@ import { useState } from "react";
 import countWords from "../../lib/utils/countWords";
 import countBytes from "../../lib/utils/countBytes";
 import countCharacters from "../../lib/utils/countCharacters";
+import TimeResult from "./TimeResult";
+import { useSpeechTime } from "../../hooks/useSpeechTime";
 
 function ScriptContainer() {
   const [wordsNum, setWordsNum] = useState(0);
@@ -13,7 +15,9 @@ function ScriptContainer() {
   const [bytesNumWithBlank, setBytesNumWithBlank] = useState(0);
   const [charactersNum, setCharactersNum] = useState(0);
   const [charactersNumWithBlank, setCharactersNumWithBlank] = useState(0);
+
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
   const analyzeText = () => {
     setWordsNum(countWords(textareaRef.current?.value));
     setBytesNum(countBytes(textareaRef.current?.value, 0)); // 공백 미포함
@@ -29,7 +33,7 @@ function ScriptContainer() {
           placeholder="스크립트를 입력하면 글자 수, 단어 수, 리딩 타임을 측정합니다."
           ref={textareaRef}
           onChange={analyzeText}
-        ></textarea>
+        />
         <CountResult
           wordsNum={wordsNum}
           bytesNum={bytesNum}
@@ -38,10 +42,7 @@ function ScriptContainer() {
           charactersNumWithBlank={charactersNumWithBlank}
         />
       </div>
-      <Styled.TimeResult>
-        <div>Speech Time</div>
-        <div>0 sec</div>
-      </Styled.TimeResult>
+      <TimeResult text={textareaRef.current?.value} />
     </Styled.Root>
   );
 }
@@ -70,30 +71,6 @@ const Styled = {
       width: 100%;
       height: 100%;
       resize: none;
-    }
-  `,
-  TimeResult: styled.div`
-    display: flex;
-    flex: 1;
-    width: 100%;
-    color: ${colors.sub_navy};
-    font-size: 20px;
-    font-weight: bold;
-
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-    }
-
-    div:nth-of-type(1) {
-      background-color: ${colors.main_yellow};
-      width: 40%;
-    }
-    div:nth-of-type(2) {
-      background-color: white;
-      width: 60%;
     }
   `,
 };

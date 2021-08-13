@@ -6,9 +6,6 @@ import { colors } from "../../lib/constants/colors";
 
 function ScrollBar() {
   const [cpm, setCpm] = useRecoilState(cpmState);
-  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setCpm(Number(e.target?.value));
-  // };
 
   return (
     <Styled.Root>
