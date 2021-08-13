@@ -5,6 +5,7 @@ import CountResult from "./CountResult";
 import { useState } from "react";
 import countWords from "../../lib/utils/countWords";
 import countBytes from "../../lib/utils/countBytes";
+import countCharacters from "../../lib/utils/countCharacters";
 
 function ScriptContainer() {
   const [wordsNum, setWordsNum] = useState(0);
@@ -12,14 +13,13 @@ function ScriptContainer() {
   const [bytesNumWithBlank, setBytesNumWithBlank] = useState(0);
   const [charactersNum, setCharactersNum] = useState(0);
   const [charactersNumWithBlank, setCharactersNumWithBlank] = useState(0);
-
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const analyzeText = () => {
     setWordsNum(countWords(textareaRef.current?.value));
     setBytesNum(countBytes(textareaRef.current?.value, 0)); // 공백 미포함
     setBytesNumWithBlank(countBytes(textareaRef.current?.value, 1)); // 공백 포함
-    setCharactersNum(countBytes(textareaRef.current?.value, 0)); // 공백 미포함
-    setCharactersNumWithBlank(countBytes(textareaRef.current?.value, 1)); // 공백 포함
+    setCharactersNum(countCharacters(textareaRef.current?.value, 0)); // 공백 미포함
+    setCharactersNumWithBlank(countCharacters(textareaRef.current?.value, 1)); // 공백 포함
   };
 
   return (
@@ -30,7 +30,13 @@ function ScriptContainer() {
           ref={textareaRef}
           onChange={analyzeText}
         ></textarea>
-        <CountResult wordsNum={wordsNum} />
+        <CountResult
+          wordsNum={wordsNum}
+          bytesNum={bytesNum}
+          bytesNumWithBlank={bytesNumWithBlank}
+          charactersNum={charactersNum}
+          charactersNumWithBlank={charactersNumWithBlank}
+        />
       </div>
       <Styled.TimeResult>
         <div>Speech Time</div>
@@ -44,11 +50,15 @@ export default ScriptContainer;
 
 const Styled = {
   Root: styled.section`
+    display: flex;
     flex: 1;
+    flex-direction: column;
     height: 100%;
 
-    & > div {
+    & > div:nth-of-type(1) {
       position: relative;
+      margin-bottom: 8px;
+      height: 88%;
     }
 
     textarea {
@@ -58,14 +68,14 @@ const Styled = {
       background-color: white;
       padding: 20px;
       width: 100%;
-      height: 90%;
+      height: 100%;
       resize: none;
     }
   `,
   TimeResult: styled.div`
     display: flex;
+    flex: 1;
     width: 100%;
-    height: 10%;
     color: ${colors.sub_navy};
     font-size: 20px;
     font-weight: bold;
@@ -77,7 +87,7 @@ const Styled = {
       border-radius: 10px;
     }
 
-    & > div {
+    div:nth-of-type(1) {
       background-color: ${colors.main_yellow};
       width: 40%;
     }
