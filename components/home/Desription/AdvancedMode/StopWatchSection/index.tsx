@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import StopWatch from "./StopWatch";
+import { colors } from "../../../../../lib/constants/colors";
 
 function StopWatchSection() {
   return (
@@ -20,5 +21,6 @@ const Styled = {
   StopWatchText: styled.div`
     margin-bottom: 4px;
     line-height: 2;
+    color: ${colors.gray_dark};
   `,
 };
