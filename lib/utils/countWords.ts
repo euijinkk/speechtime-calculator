@@ -5,9 +5,10 @@ export default function countWords(text: string) {
   let arr = text.trim().split(/\s+/);
 
   for (let i = 0; i < arr.length; i++) {
-    if (isWord(arr[i])) {
-      wordCount++;
-    }
+    // if (isWord(arr[i])) {
+    //   wordCount++;
+    // }
+    isWord(arr[i]) && wordCount++;
   }
   return wordCount;
 }
