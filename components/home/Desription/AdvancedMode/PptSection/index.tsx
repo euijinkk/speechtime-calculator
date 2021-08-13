@@ -14,7 +14,7 @@ function PptSection() {
 export default PptSection;
 
 const Styled = {
-  Root: styled.article``,
+  Root: styled.section``,
   PptText: styled.div`
     margin-bottom: 22px;
   `,

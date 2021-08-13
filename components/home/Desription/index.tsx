@@ -4,15 +4,15 @@ import styled from "@emotion/styled";
 import { colors } from "../../../lib/constants/colors";
 import { useRecoilValue } from "recoil";
 import { modeState } from "../../../store";
-import BasicMode from "./BasicMode/BasicMode";
-import AdvancedMode from "./AdvancedMode/AdvancedMode";
+import BasicMode from "./BasicMode";
+import AdvancedMode from "./AdvancedMode";
 
 function Description() {
   const mode = useRecoilValue(modeState);
 
   return (
     <Styled.Root>
-      {mode === "Basic" ? <BasicMode /> : <AdvancedMode />}
+      {mode && (mode === "Basic" ? <BasicMode /> : <AdvancedMode />)}
     </Styled.Root>
   );
 }

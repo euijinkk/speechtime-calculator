@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Description from "./Desription/Description";
-import ScriptContainer from "./ScriptContainer/ScriptContainer";
+import Description from "./Desription";
+import ScriptContainer from "./ScriptContainer";
 
 function Main() {
   return (

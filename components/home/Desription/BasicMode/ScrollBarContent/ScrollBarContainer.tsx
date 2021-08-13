@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { useRecoilState } from "recoil";
-import { cpmState } from "../../../../store";
-import { colors } from "../../../../lib/constants/colors";
+import { cpmState } from "../../../../../store";
+import { colors } from "../../../../../lib/constants/colors";
 
-function ScrollBarConatiner() {
+function ScrollBarContainer() {
   const [cpm, setCpm] = useRecoilState(cpmState);
 
   return (
@@ -30,7 +30,7 @@ function ScrollBarConatiner() {
   );
 }
 
-export default ScrollBarConatiner;
+export default ScrollBarContainer;
 
 const Styled = {
   Root: styled.div`

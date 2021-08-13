@@ -15,7 +15,7 @@ function CustomizeSection() {
 export default CustomizeSection;
 
 const Styled = {
-  Root: styled.article``,
+  Root: styled.section``,
   CustomizeText: styled.div`
     margin-bottom: 22px;
   `,

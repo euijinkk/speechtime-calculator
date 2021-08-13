@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "@emotion/styled";
-import StopWatch from "./StopWatch";
 import CustomizeSection from "./CustomizeSection";
+import StopWatchSection from "./StopWatchSection";
 import PptSection from "./PptSection";
 
 function AdvancedMode() {
   return (
     <Styled.Root>
-      <StopWatch />
+      <StopWatchSection />
       <CustomizeSection />
       <PptSection />
     </Styled.Root>
