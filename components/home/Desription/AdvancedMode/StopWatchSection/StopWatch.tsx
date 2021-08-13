@@ -7,45 +7,36 @@ import useInterval from "../../../../../hooks/useInterval";
 function StopWatch() {
   //   let startTime = 0;
   //   let endTime = 0;
+  //   무엇을 state로 관리해야하고, 무엇을 변수로 관리해야하고, 무엇을 useRef로 관리해야할까?
   const [startTime, setStartTime] = useState(0);
   const [endTime, setEndTime] = useState(0);
   const [min, setMin] = useState("00");
   const [sec, setSec] = useState("00");
-  const [milisec, setMilisec] = useState("00");
+  const [millisec, setMillisec] = useState("00");
   const [isStart, setIsStart] = useState(false);
-  let timeInterval;
   const intervalRef = useRef(null);
+  // setInterval 을 clearInterval 하기 위해서는, useRef를 사용해야 한다. 그냥 const/let변수로 지정하면 해결되지 않는다.
 
   const handleStart = () => {
-    // if (!startTime) {
-    //   startTime = Date.now();
-    // } else if (!isStart && startTime) {
-    //   console.log("restart");
-    //   startTime += Date.now() - endTime;
-    // }
-    // startTime += Date.now() - endTime;
-
     isStart ? stopTimer() : startTimer();
-
     setIsStart((prev) => !prev);
   };
 
   function startTimer() {
-    let c;
+    let tempStartTime;
     if (startTime) {
-      c = Date.now() - endTime + startTime;
+      tempStartTime = Date.now() - endTime + startTime;
     } else {
-      c = Date.now();
+      tempStartTime = Date.now();
     }
-    setStartTime(c);
+    setStartTime(tempStartTime);
 
     intervalRef.current = setInterval(function () {
-      const nowTime = new Date(Date.now() - c);
+      const nowTime = new Date(Date.now() - tempStartTime);
       setMin(addZero(nowTime.getMinutes()));
       setSec(addZero(nowTime.getSeconds()));
-      setMilisec(addZero(Math.floor(nowTime.getMilliseconds() / 10)));
+      setMillisec(addZero(Math.floor(nowTime.getMilliseconds() / 10)));
     }, 1);
-    console.log(timeInterval);
   }
 
   function stopTimer() {
@@ -60,7 +51,7 @@ function StopWatch() {
     setStartTime(0);
     setMin("00");
     setSec("00");
-    setMilisec("00");
+    setMillisec("00");
     setIsStart(false);
   };
 
@@ -71,7 +62,7 @@ function StopWatch() {
         <span>:&nbsp;</span>
         <span>{sec}&nbsp;</span>
         <span>.&nbsp;</span>
-        <span>{milisec}</span>
+        <span>{millisec}</span>
       </Styled.Time>
       <div>
         <Styled.Reset onClick={handleReset}>Reset</Styled.Reset>
