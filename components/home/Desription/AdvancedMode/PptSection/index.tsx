@@ -48,35 +48,53 @@ function PptSection() {
         ∙ PPT의 장수, 슬라이드 전환 시간, 자료 감상 시간을 고려해주세요.
       </Styled.PptText>
       <Styled.PptTable>
-        <div>{pptNum} 수</div>
+        <div> PPT 수</div>
         <div>
-          <Styled.OperatorContainer operator="left">
+          <Styled.OperatorContainer
+            operator="left"
+            onClick={() => handleClick("pptNum", "-")}
+          >
             <Styled.HLine />
           </Styled.OperatorContainer>
-          0 장
-          <Styled.OperatorContainer operator="right">
+          {pptNum} 장
+          <Styled.OperatorContainer
+            operator="right"
+            onClick={() => handleClick("pptNum", "+")}
+          >
             <Styled.HLine />
             <Styled.VLine />
           </Styled.OperatorContainer>
         </div>
         <div>슬라이드 전환 시간</div>
         <div>
-          <Styled.OperatorContainer operator="left">
+          <Styled.OperatorContainer
+            operator="left"
+            onClick={() => handleClick("pptTerm", "-")}
+          >
             <Styled.HLine />
           </Styled.OperatorContainer>
           {pptTerm} 초
-          <Styled.OperatorContainer operator="right">
+          <Styled.OperatorContainer
+            operator="right"
+            onClick={() => handleClick("pptTerm", "+")}
+          >
             <Styled.HLine />
             <Styled.VLine />
           </Styled.OperatorContainer>
         </div>
         <div>자료 감상 시간</div>
         <div>
-          <Styled.OperatorContainer operator="left">
+          <Styled.OperatorContainer
+            operator="left"
+            onClick={() => handleClick("watchTime", "-")}
+          >
             <Styled.HLine />
           </Styled.OperatorContainer>
           {watchTime} 초
-          <Styled.OperatorContainer operator="right">
+          <Styled.OperatorContainer
+            operator="right"
+            onClick={() => handleClick("watchTime", "+")}
+          >
             <Styled.HLine />
             <Styled.VLine />
           </Styled.OperatorContainer>
