@@ -6,7 +6,7 @@ function SpeedTable() {
   return (
     <Styled.Root>
       <div>매우 느림</div>
-      <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~ 390</div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~ 390</div>
       <div>느림</div>
       <div>390 ~ 420</div>
       <div>보통</div>
@@ -14,7 +14,7 @@ function SpeedTable() {
       <div>빠름</div>
       <div>450 ~ 480</div>
       <div>매우 빠름</div>
-      <div>480 ~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>480 ~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
     </Styled.Root>
   );
 }
