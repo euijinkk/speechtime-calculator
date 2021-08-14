@@ -26,11 +26,11 @@ function StopWatch() {
 
   const getStartTime = () => {
     const currentTime = Date.now();
-    if(startTime){
+    if (startTime) {
       return currentTime - endTime + startTime;
     }
     return currentTime;
-  }
+  };
 
   const startTimer = useCallback(() => {
     const tempStartTime = getStartTime();
@@ -54,8 +54,6 @@ function StopWatch() {
   }, []);
 
   const handleReset = useCallback(() => {
-    console.log("reset");
-    console.log(intervalRef.current);
     clearInterval(intervalRef.current);
     setStartTime(0);
     setMin("00");

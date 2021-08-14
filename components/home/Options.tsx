@@ -8,7 +8,6 @@ import { css } from "@emotion/react";
 function Options() {
   const [language, setLanguage] = useState<String>("KOR");
   const [mode, setMode] = useRecoilState(modeState);
-  console.log(mode);
 
   return (
     <Styled.Root mode={mode}>
