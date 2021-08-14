@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import styled from "@emotion/styled";
 import { colors } from "../../../../../lib/constants/colors";
 import addZero from "../../../../../lib/utils/addZero";
-import useInterval from "../../../../../hooks/useInterval";
 import { useCallback } from "react";
 
 function StopWatch() {

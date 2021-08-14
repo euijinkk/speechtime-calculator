@@ -11,7 +11,7 @@ function Description() {
   const mode = useRecoilValue(modeState);
 
   return (
-    <Styled.Root>
+    <Styled.Root mode={mode}>
       {mode && (mode === "Basic" ? <BasicMode /> : <AdvancedMode />)}
     </Styled.Root>
   );
@@ -20,12 +20,12 @@ function Description() {
 export default Description;
 
 const Styled = {
-  Root: styled.section`
+  Root: styled.section<{ mode: string }>`
     margin-right: 8px;
     border-radius: 10px;
     background-color: white;
     padding: 0 16px;
-    padding-top: 54px;
+    padding-top: ${({ mode }) => (mode === "Basic" ? "54px" : "32px")};
     width: 480px;
     height: 100%;
     color: ${colors.gray_dark};
