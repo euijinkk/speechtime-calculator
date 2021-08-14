@@ -3,32 +3,27 @@ import styled from "@emotion/styled";
 import { useRef } from "react";
 import { colors } from "../../../../../lib/constants/colors";
 import { cpm2State, textState } from "../../../../../store";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 
 function CustomizeSection() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const [cpm2, setCpm2] = useRecoilState(cpm2State);
+  const setCpm2 = useSetRecoilState(cpm2State);
   const text = useRef<string | null | undefined>(null);
-  const [text2, setText2] = useState("");
+  // useRef는 unmount될때에도 값을 가지고 올 수 있다. useState는 가지고 올 수 없다.
   const [text3, setText3] = useRecoilState(textState);
-  // text.current = textareaRef.current?.value;
+  // mount될때 값을 가지고 오기 위하여 전역적으로 변수를 관라
+
+  // textarea가 unmount될 때, value가 사라지는 것을 방지하기 위해서
   useEffect(() => {
     textareaRef.current.value = text3;
     text.current = text3;
-    console.log(`text3 Mount`, text3);
     return () => {
-      // console.log(`textareaRef.current?.value`, textareaRef.current?.value);
-      // console.log(`text?.current`, text?.current);
-
-      !text.current === null || console.log(123);
       setText3(text.current);
-      console.log(`text UnMount`, text.current);
     };
   }, []);
 
   const handleChange = () => {
     text.current = textareaRef.current?.value;
-    setText2(textareaRef.current.value);
     setText3(textareaRef.current.value);
     setCpm2(
       Math.round(
