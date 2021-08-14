@@ -1,25 +1,33 @@
 import { useRecoilValue } from "recoil";
-import { cpm2State, cpmState, modeState } from "../store";
+import {
+  cpm2State,
+  cpmState,
+  modeState,
+  pptNumState,
+  pptTermState,
+  watchTimeState,
+} from "../store";
 
 export const useSpeechTime = (text: string) => {
   const mode = useRecoilValue(modeState);
   const cpmNum = useRecoilValue(cpmState);
   const cpmNum2 = useRecoilValue(cpm2State);
-
-  const getCpm = () => {
-    if (mode === "Basic") {
-      return cpmNum;
-    }
-    return cpmNum2;
-  };
-
-  const cpm = getCpm();
-  if (cpm === 0 && mode === "Advanced") {
-    return "입력";
-  }
-
   const length = text ? text.trim().replace(/\s+/g, " ").length : 0;
-  return splitMinAndSec((length / cpm) * 60);
+  const pptNum = useRecoilValue(pptNumState);
+  const pptTerm = useRecoilValue(pptTermState);
+  const watchTime = useRecoilValue(watchTimeState);
+  // 비효율적 코드 - Basic mode에서는 pptNum, pptTerm, watchTime, cpmNum2를 사용하지 않는데 한번에 선언해둠.
+
+  if (mode === "Basic") {
+    return splitMinAndSec((length / cpmNum) * 60);
+  } else {
+    if (!cpmNum2) {
+      return "왼쪽 순서를 따라해보세요.";
+    }
+    return splitMinAndSec(
+      (length / cpmNum2) * 60 + pptNum * pptTerm + watchTime
+    );
+  }
 };
 
 function splitMinAndSec(speechTime: number) {

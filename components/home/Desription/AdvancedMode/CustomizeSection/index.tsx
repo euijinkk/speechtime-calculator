@@ -14,6 +14,7 @@ function CustomizeSection() {
   // mount될때 값을 가지고 오기 위하여 전역적으로 변수를 관라
 
   // textarea가 unmount될 때, value가 사라지는 것을 방지하기 위해서
+  // 비효율적 코드 - unmount 될 때 textarea 값을 기억하기 위해서, useRef 변수, recoil 변수를 추가한 것
   useEffect(() => {
     textareaRef.current.value = text3;
     text.current = text3;
