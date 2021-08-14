@@ -5,9 +5,6 @@ import addZero from "../../../../../lib/utils/addZero";
 import { useCallback } from "react";
 
 function StopWatch() {
-  //   let startTime = 0;
-  //   let endTime = 0;
-  //   무엇을 state로 관리해야하고, 무엇을 변수로 관리해야하고, 무엇을 useRef로 관리해야할까?
   const [startTime, setStartTime] = useState(0);
   const [endTime, setEndTime] = useState(0);
   const [min, setMin] = useState("00");
@@ -43,10 +40,6 @@ function StopWatch() {
       setMillisec(addZero(Math.floor(nowTime.getMilliseconds() / 10)));
     }, 1);
   }, [startTime, endTime]);
-
-  //   1. setState 함수가 비동기이기 때문에, nowTime 에 startTime 을 넣으면, 값이 들어가지 않는 문제 발생
-  //   2. 그래서 setStartTime에 들어갈 인자를 tempStartTime 변수로 지정하여 사용한다.
-  //   3. tempStartTime 값이 들어가고, 사용되는 곳의 scope가 다르기 때문에, 공통된 곳에서 let tempStartTime; 을 선언해준다.
 
   const stopTimer = useCallback(() => {
     clearInterval(intervalRef.current);
