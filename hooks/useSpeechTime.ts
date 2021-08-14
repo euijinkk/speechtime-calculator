@@ -1,8 +1,23 @@
 import { useRecoilValue } from "recoil";
-import { cpmState } from "../store";
+import { cpm2State, cpmState, modeState } from "../store";
 
 export const useSpeechTime = (text: string) => {
-  const cpm = useRecoilValue(cpmState);
+  const mode = useRecoilValue(modeState);
+  const cpmNum = useRecoilValue(cpmState);
+  const cpmNum2 = useRecoilValue(cpm2State);
+
+  const getCpm = () => {
+    if (mode === "Basic") {
+      return cpmNum;
+    }
+    return cpmNum2;
+  };
+
+  const cpm = getCpm();
+  if (cpm === 0 && mode === "Advanced") {
+    return "입력";
+  }
+
   const length = text ? text.trim().replace(/\s+/g, " ").length : 0;
   return splitMinAndSec((length / cpm) * 60);
 };

@@ -10,6 +10,11 @@ export const cpmState = atom<number>({
   default: 430,
 });
 
+export const cpm2State = atom<number>({
+  key: "cpm2State",
+  default: 0,
+});
+
 export const pptNumState = atom<number>({
   key: "pptNumState",
   default: 0,
@@ -23,4 +28,9 @@ export const pptTermState = atom<number>({
 export const watchTimeState = atom<number>({
   key: "watchTimeState",
   default: 0,
+});
+
+export const textState = atom<string>({
+  key: "textState",
+  default: "",
 });

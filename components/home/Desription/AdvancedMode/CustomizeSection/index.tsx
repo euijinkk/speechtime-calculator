@@ -1,13 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { useRef } from "react";
 import { colors } from "../../../../../lib/constants/colors";
-import { cpmState } from "../../../../../store";
+import { cpm2State, textState } from "../../../../../store";
 import { useRecoilState } from "recoil";
 
 function CustomizeSection() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const [cpm, setCpm] = useRecoilState(cpmState);
+  const [cpm2, setCpm2] = useRecoilState(cpm2State);
+  const text = useRef<string | null | undefined>(null);
+  const [text2, setText2] = useState("");
+  const [text3, setText3] = useRecoilState(textState);
+  // text.current = textareaRef.current?.value;
+  useEffect(() => {
+    textareaRef.current.value = text3;
+    text.current = text3;
+    console.log(`text3 Mount`, text3);
+    return () => {
+      // console.log(`textareaRef.current?.value`, textareaRef.current?.value);
+      // console.log(`text?.current`, text?.current);
+
+      !text.current === null || console.log(123);
+      setText3(text.current);
+      console.log(`text UnMount`, text.current);
+    };
+  }, []);
+
+  const handleChange = () => {
+    text.current = textareaRef.current?.value;
+    setText2(textareaRef.current.value);
+    setText3(textareaRef.current.value);
+    setCpm2(
+      Math.round(
+        (textareaRef.current.value.trim().replace(/\s+/g, " ").length / 20) * 60
+      )
+    );
+  };
 
   return (
     <Styled.Root>
@@ -18,15 +46,7 @@ function CustomizeSection() {
       <textarea
         placeholder="20초 동안 읽은 스크립트를 ‘정확히' 입력해주세요. "
         ref={textareaRef}
-        onChange={() =>
-          setCpm(
-            Math.round(
-              (textareaRef.current.value.trim().replace(/\s+/g, " ").length /
-                20) *
-                60
-            )
-          )
-        }
+        onChange={handleChange}
       />
     </Styled.Root>
   );

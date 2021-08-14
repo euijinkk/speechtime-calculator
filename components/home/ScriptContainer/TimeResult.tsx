@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { colors } from "../../../lib/constants/colors";
 import { useSpeechTime } from "../../../hooks/useSpeechTime";
+import { useRecoilValue } from "recoil";
+import { modeState } from "../../../store";
 
 interface Props {
   text?: string;
@@ -10,10 +12,15 @@ interface Props {
 function TimeResult({ text }: Props) {
   const [speechTime, setSpeechTime] = useState("0초");
   const a = useSpeechTime(text);
+  // const mode = useRecoilValue(modeState);
 
   useEffect(() => {
     setSpeechTime(a);
   }, [a]);
+
+  // useEffect(() => {
+  //   mode === "Advanced" && setSpeechTime("커스터");
+  // }, [mode]);
 
   return (
     <Styled.Root>

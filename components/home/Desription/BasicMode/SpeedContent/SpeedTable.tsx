@@ -44,11 +44,11 @@ const Styled = {
       line-height: 39px;
       font-size: 14px;
     }
-    div:nth-child(odd) {
+    div:nth-of-type(odd) {
       border-bottom: 2px solid white;
       background-color: ${colors.gray_light};
     }
-    div:nth-child(even) {
+    div:nth-of-type(even) {
       border-bottom: 2px solid ${colors.gray_light};
       /* background-color: ${colors.gray_light}; */
     }
