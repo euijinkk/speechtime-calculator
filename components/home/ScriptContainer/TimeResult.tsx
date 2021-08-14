@@ -12,15 +12,10 @@ interface Props {
 function TimeResult({ text }: Props) {
   const [speechTime, setSpeechTime] = useState("0초");
   const a = useSpeechTime(text);
-  // const mode = useRecoilValue(modeState);
 
   useEffect(() => {
     setSpeechTime(a);
   }, [a]);
-
-  // useEffect(() => {
-  //   mode === "Advanced" && setSpeechTime("커스터");
-  // }, [mode]);
 
   return (
     <Styled.Root>

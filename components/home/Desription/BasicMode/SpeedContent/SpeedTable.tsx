@@ -28,7 +28,6 @@ const Styled = {
     grid-template-columns: repeat(1, 178px 270px);
     align-items: center;
     justify-content: center;
-    /* row-gap: 2px; */
     border: 1px solid ${colors.gray_light};
     border-radius: 10px;
     overflow: hidden;
@@ -38,8 +37,6 @@ const Styled = {
     div {
       width: 100%;
       height: 100%;
-      /* align-self: stretch; */
-      /* justify-self: stretch; */
       text-align: center;
       line-height: 39px;
       font-size: 14px;
@@ -50,7 +47,6 @@ const Styled = {
     }
     div:nth-of-type(even) {
       border-bottom: 2px solid ${colors.gray_light};
-      /* background-color: ${colors.gray_light}; */
     }
     div:nth-of-type(9),
     div:nth-of-type(10) {
