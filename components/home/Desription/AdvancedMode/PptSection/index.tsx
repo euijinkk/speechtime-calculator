@@ -13,13 +13,42 @@ function PptSection() {
   const [pptTerm, setPptTerm] = useRecoilState(pptTermState);
   const [watchTime, setWatchTime] = useRecoilState(watchTimeState);
 
+  const handleClick = (type: string, operator: string) => {
+    // 함수명에 변수명을 동적으로 할당하는 방법은 무엇일까?
+    if (operator === "+") {
+      switch (type) {
+        case "pptNum":
+          setPptNum((prev) => prev + 1);
+          break;
+        case "pptTerm":
+          setPptTerm((prev) => prev + 1);
+          break;
+        case "watchTime":
+          setWatchTime((prev) => prev + 1);
+          break;
+      }
+    } else {
+      switch (type) {
+        case "pptNum":
+          setPptNum((prev) => prev + 1);
+          break;
+        case "pptTerm":
+          setPptTerm((prev) => prev + 1);
+          break;
+        case "watchTime":
+          setWatchTime((prev) => prev + 1);
+          break;
+      }
+    }
+  };
+
   return (
     <Styled.Root>
       <Styled.PptText>
         ∙ PPT의 장수, 슬라이드 전환 시간, 자료 감상 시간을 고려해주세요.
       </Styled.PptText>
       <Styled.PptTable>
-        <div>PPT 수</div>
+        <div>{pptNum} 수</div>
         <div>
           <Styled.OperatorContainer operator="left">
             <Styled.HLine />
@@ -35,7 +64,7 @@ function PptSection() {
           <Styled.OperatorContainer operator="left">
             <Styled.HLine />
           </Styled.OperatorContainer>
-          0 초
+          {pptTerm} 초
           <Styled.OperatorContainer operator="right">
             <Styled.HLine />
             <Styled.VLine />
@@ -46,7 +75,7 @@ function PptSection() {
           <Styled.OperatorContainer operator="left">
             <Styled.HLine />
           </Styled.OperatorContainer>
-          0 초
+          {watchTime} 초
           <Styled.OperatorContainer operator="right">
             <Styled.HLine />
             <Styled.VLine />
