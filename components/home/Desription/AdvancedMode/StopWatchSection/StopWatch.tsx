@@ -24,15 +24,16 @@ function StopWatch() {
     setIsStart((prev) => !prev);
   };
 
-  const startTimer = useCallback(() => {
-    let tempStartTime: number;
-    if (startTime) {
-      tempStartTime = Date.now() - endTime + startTime;
-      //   setStartTime(Date.now() - endTime + startTime);
-    } else {
-      tempStartTime = Date.now();
-      //   setStartTime(Date.now());
+  const getStartTime = () => {
+    const currentTime = Date.now();
+    if(startTime){
+      return currentTime - endTime + startTime;
     }
+    return currentTime;
+  }
+
+  const startTimer = useCallback(() => {
+    const tempStartTime = getStartTime();
     setStartTime(tempStartTime);
 
     intervalRef.current = setInterval(function () {
