@@ -19,7 +19,7 @@ export default StopWatchSection;
 const Styled = {
   Root: styled.section``,
   StopWatchText: styled.div`
-    margin-bottom: 4px;
+    margin-bottom: 10px;
     line-height: 2;
     color: ${colors.gray_dark};
   `,
