@@ -27,11 +27,13 @@ function ScriptContainer() {
   return (
     <Styled.Root>
       <div>
-        <textarea
-          placeholder="스크립트를 입력하면 글자 수, 단어 수, 리딩 타임을 측정합니다."
-          ref={textareaRef}
-          onChange={analyzeText}
-        />
+        <Styled.textareaContainer>
+          <textarea
+            placeholder="스크립트를 입력하면 글자 수, 단어 수, 리딩 타임을 측정합니다."
+            ref={textareaRef}
+            onChange={analyzeText}
+          />
+        </Styled.textareaContainer>
         <CountResult
           wordsNum={wordsNum}
           bytesNum={bytesNum}
@@ -66,9 +68,16 @@ const Styled = {
       border-radius: 10px;
       background-color: white;
       padding: 20px;
+      padding-bottom: 100px;
       width: 100%;
-      height: 100%;
+      height: 90%;
       resize: none;
     }
+  `,
+  textareaContainer: styled.div`
+    border-radius: 10px;
+    background-color: white;
+    width: 100%;
+    height: 100%;
   `,
 };
