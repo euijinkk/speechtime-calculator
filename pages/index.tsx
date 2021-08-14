@@ -24,5 +24,6 @@ const Styled = {
     margin: auto;
     width: 100%;
     max-width: 1190px;
+    font-family: "Noto Sans KR";
   `,
 };
