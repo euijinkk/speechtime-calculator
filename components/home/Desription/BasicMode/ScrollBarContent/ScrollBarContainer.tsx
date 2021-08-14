@@ -25,7 +25,7 @@ function ScrollBarContainer() {
           type="range"
           min="310"
           max="550"
-          defaultValue="430"
+          defaultValue={cpm}
           step="10"
           className="slider"
           id="myRange"
