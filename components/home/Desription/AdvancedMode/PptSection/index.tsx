@@ -30,13 +30,13 @@ function PptSection() {
     } else {
       switch (type) {
         case "pptNum":
-          setPptNum((prev) => prev + 1);
+          pptNum > 0 && setPptNum((prev) => prev - 1);
           break;
         case "pptTerm":
-          setPptTerm((prev) => prev + 1);
+          pptTerm > 0 && setPptTerm((prev) => prev - 1);
           break;
         case "watchTime":
-          setWatchTime((prev) => prev + 1);
+          watchTime > 0 && setWatchTime((prev) => prev - 1);
           break;
       }
     }
