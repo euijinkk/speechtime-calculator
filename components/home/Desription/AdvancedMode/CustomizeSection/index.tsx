@@ -2,9 +2,13 @@ import React from "react";
 import styled from "@emotion/styled";
 import { useRef } from "react";
 import { colors } from "../../../../../lib/constants/colors";
+import { cpmState } from "../../../../../store";
+import { useRecoilState } from "recoil";
 
 function CustomizeSection() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const [cpm, setCpm] = useRecoilState(cpmState);
+
   return (
     <Styled.Root>
       <Styled.CustomizeText>
@@ -14,6 +18,15 @@ function CustomizeSection() {
       <textarea
         placeholder="20초 동안 읽은 스크립트를 ‘정확히' 입력해주세요. "
         ref={textareaRef}
+        onChange={() =>
+          setCpm(
+            Math.round(
+              (textareaRef.current.value.trim().replace(/\s+/g, " ").length /
+                20) *
+                60
+            )
+          )
+        }
       />
     </Styled.Root>
   );

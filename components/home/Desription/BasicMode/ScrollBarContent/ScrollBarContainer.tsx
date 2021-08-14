@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "@emotion/styled";
 import { useRecoilState } from "recoil";
 import { cpmState } from "../../../../../store";
 import { colors } from "../../../../../lib/constants/colors";
+import { useEffect } from "react";
 
 function ScrollBarContainer() {
   const [cpm, setCpm] = useRecoilState(cpmState);
+  const inputRef = useRef<HTMLInputElement>(null);
+  // 모드 전환 시, basic mode에 있는 scroll bar 를 기준으로 cpm이 측정되도록 한다
+  useEffect(() => {
+    setCpm(Number(inputRef.current.value));
+  }, []);
 
   return (
     <Styled.Root>
@@ -15,6 +21,7 @@ function ScrollBarContainer() {
       </Styled.CpmContainer>
       <Styled.ScrollBar>
         <input
+          ref={inputRef}
           type="range"
           min="310"
           max="550"

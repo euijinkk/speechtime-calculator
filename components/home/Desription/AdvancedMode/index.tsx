@@ -4,8 +4,13 @@ import CustomizeSection from "./CustomizeSection";
 import StopWatchSection from "./StopWatchSection";
 import PptSection from "./PptSection";
 import { colors } from "../../../../lib/constants/colors";
+import { useEffect } from "react";
+import { useSetRecoilState } from "recoil";
+import { cpmState } from "../../../../store";
 
 function AdvancedMode() {
+  const setCpm = useSetRecoilState(cpmState);
+
   return (
     <Styled.Root>
       <StopWatchSection />
