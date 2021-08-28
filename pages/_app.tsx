@@ -14,27 +14,30 @@ function MyApp({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
         />
-        {/* <meta
+        <meta
           name="description"
-          content="Learn Korean through your favorite K-Pop artists and songs!"
+          content="여러분의 발표 대본이 몇 분 걸리는지 궁금하다면?"
         />
         <meta
           name="keywords"
-          content="Learn Korean through your favorite K-Pop artists and songs!"
+          content="발표시간 계산기, 글자수세기, 단어수세기, PT시간 측정"
         />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Kyrics" />
-        <meta property="og:url" content="https://www.kyrics.org" />
-        <meta property="og:site_name" content="Kyrics" />
+        <meta property="og:title" content="발표시간 계산기" />
+        <meta
+          property="og:url"
+          content="https://speechtime-calculator.vercel.app/"
+        />
+        <meta property="og:site_name" content="발표시간 계산기" />
         <meta
           property="og:description"
-          content="케이팝 가사로 배우는 우리말, 키릭스"
+          content="여러분의 발표 대본이 몇 분 걸리는지 궁금하다면?"
         />
         <meta
           property="og:image"
           content="https://kyrics.s3.ap-northeast-2.amazonaws.com/kyrics_og_image.png"
-        /> */}
+        />
       </Head>
       <Component {...pageProps} />
     </RecoilRoot>
