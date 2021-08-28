@@ -8,13 +8,13 @@ function MyApp({ Component, pageProps }) {
     <RecoilRoot>
       <Head>
         <title>발표시간 계산기</title>
-        <link rel="icon" href="/assets/icons/logo.svg" />
+        <link rel="icon" href="/assets/logo.svg" />
         <meta charSet="UTF-8" />
         <meta
           name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
         />
-        <meta
+        {/* <meta
           name="description"
           content="Learn Korean through your favorite K-Pop artists and songs!"
         />
@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
         <meta
           property="og:image"
           content="https://kyrics.s3.ap-northeast-2.amazonaws.com/kyrics_og_image.png"
-        />
+        /> */}
       </Head>
       <Component {...pageProps} />
     </RecoilRoot>
