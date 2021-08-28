@@ -20,7 +20,9 @@ function TimeResult({ text }: Props) {
   return (
     <Styled.Root>
       <div>Speech Time</div>
-      <div>{speechTime}</div>
+      <div>
+        {speechTime} ({})
+      </div>
     </Styled.Root>
   );
 }
@@ -33,7 +35,7 @@ const Styled = {
     flex: 1;
     width: 100%;
     color: ${colors.sub_navy};
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 
     div {
