@@ -6,14 +6,14 @@ import { colors } from "../../lib/constants/colors";
 import { css } from "@emotion/react";
 
 function Options() {
-  const [language, setLanguage] = useState<String>("KOR");
+  const [language, setLanguage] = useState<String>("한국어");
   const [mode, setMode] = useRecoilState(modeState);
 
   return (
     <Styled.Root mode={mode}>
       <button onClick={() => setMode("Basic")}>Basic Mode</button>
       <button onClick={() => setMode("Advanced")}>Advanced Mode</button>
-      <button>Language: {language}</button>
+      <button>{language}</button>
       {/* dropdown은 따로 컴포넌트 분리할까? */}
     </Styled.Root>
   );
@@ -76,6 +76,7 @@ const Styled = {
       padding-right: 24px;
       text-align: right;
       color: ${colors.gray_dark};
+      font-weight: bold;
     }
   `,
 };
