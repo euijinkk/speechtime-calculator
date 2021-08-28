@@ -20,15 +20,6 @@ export default AdvancedMode;
 const Styled = {
   Root: styled.article`
     color: ${colors.gray_dark};
-  `,
-  StopWatchText: styled.div`
-    margin-bottom: 4px;
-    line-height: 2;
-  `,
-  CustomizeText: styled.div`
-    margin-bottom: 22px;
-  `,
-  PptText: styled.div`
-    margin-bottom: 22px;
+    font-size: 14px;
   `,
 };

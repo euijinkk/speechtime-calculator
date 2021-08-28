@@ -81,23 +81,23 @@ const Styled = {
     margin-bottom: 8px;
     border: 1px solid ${colors.gray_light};
     border-radius: 10px;
-    height: 52px;
+    height: 48px;
     text-align: center;
-    line-height: 52px;
+    line-height: 48px;
     color: ${colors.sub_navy};
     font-size: 24px;
 
     & ~ div {
       display: flex;
-      margin-bottom: 44px;
+      margin-bottom: 32px;
 
       & > div {
         flex: 5;
         border-radius: 10px;
         cursor: pointer;
-        height: 48px;
+        height: 44px;
         text-align: center;
-        line-height: 48px;
+        line-height: 44px;
       }
     }
   `,

@@ -162,13 +162,13 @@ const Styled = {
     position: absolute;
     background-color: #333333;
     width: 15px;
-    height: 1px;
+    height: 2px;
   `,
   VLine: styled.div`
     position: absolute;
     left: 7.5px;
     background-color: #333333;
-    width: 1px;
+    width: 2px;
     height: 15px;
   `,
 };

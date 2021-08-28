@@ -36,7 +36,7 @@ function CustomizeSection() {
   return (
     <Styled.Root>
       <Styled.CustomizeText>
-        ∙ 20초동안 읽은 스크립트를 입력해주세요. 전체 스크립트의 PT - Time이
+        ∙ 20초동안 읽은 스크립트를 입력해주세요. 전체 스크립트의 발표 시간이
         계산됩니다.
       </Styled.CustomizeText>
       <textarea
@@ -53,7 +53,7 @@ export default CustomizeSection;
 const Styled = {
   Root: styled.section`
     textarea {
-      margin-bottom: 40px;
+      margin-bottom: 26px;
       outline: 0;
       border: 1px solid ${colors.gray_light};
       border-radius: 10px;
