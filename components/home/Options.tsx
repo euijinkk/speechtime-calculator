@@ -13,7 +13,9 @@ function Options() {
     <Styled.Root mode={mode}>
       <button onClick={() => setMode("Basic")}>Basic Mode</button>
       <button onClick={() => setMode("Advanced")}>Advanced Mode</button>
-      <button>{language}</button>
+      <div>
+        <button>{language}</button>
+      </div>
       {/* dropdown은 따로 컴포넌트 분리할까? */}
     </Styled.Root>
   );
@@ -26,7 +28,7 @@ const Styled = {
     display: flex;
     margin-bottom: 8px;
     width: 100%;
-    button {
+    & > button {
       margin-right: 8px;
       outline: 0;
       border: 0;
@@ -70,13 +72,25 @@ const Styled = {
               font-weight: bold;
             `}
     }
-    button:nth-of-type(3) {
+    & > div {
       flex: 1;
       margin: 0;
+
+      border-radius: 10px;
+      background-color: white;
       padding-right: 24px;
+      height: 54px;
       text-align: right;
+      line-height: 54px;
       color: ${colors.gray_dark};
+      color: ${colors.sub_navy};
       font-weight: bold;
+      & > button {
+        display: inline;
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+      }
     }
   `,
 };
