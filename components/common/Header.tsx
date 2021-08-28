@@ -17,17 +17,17 @@ const Styled = {
   Root: styled.header`
     display: flex;
     align-items: center;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin-top: 24px;
+    margin-bottom: 22px;
     width: 100%;
   `,
   Logo: styled.img`
-    margin-right: 16px;
+    margin-right: 12px;
   `,
   SiteName: styled.h1`
     margin: 0;
     color: ${colors.sub_navy};
-    font-size: 48px;
+    font-size: 32px;
     font-weight: bold;
   `,
 };
