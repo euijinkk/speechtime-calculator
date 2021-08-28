@@ -12,9 +12,6 @@ interface Props {
 function TimeResult({ text }: Props) {
   const [speechTime, setSpeechTime] = useState("0초");
   const speechResult = useSpeechTime(text);
-  const mode = useRecoilValue(modeState);
-  const cpm = useRecoilValue(cpmState);
-  const cpm2 = useRecoilValue(cpm2State);
 
   useEffect(() => {
     setSpeechTime(speechResult);
@@ -23,9 +20,7 @@ function TimeResult({ text }: Props) {
   return (
     <Styled.Root>
       <div>Speech Time</div>
-      <div>
-        {speechTime} ({mode === "Basic" ? cpm : cpm2} cpm)
-      </div>
+      <div>{speechTime}</div>
     </Styled.Root>
   );
 }

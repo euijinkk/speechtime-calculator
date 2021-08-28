@@ -19,22 +19,23 @@ export const useSpeechTime = (text: string) => {
   // 비효율적 코드 - Basic mode에서는 pptNum, pptTerm, watchTime, cpmNum2를 사용하지 않는데 한번에 선언해둠.
 
   if (mode === "Basic") {
-    return splitMinAndSec((length / cpmNum) * 60);
+    return splitMinAndSec((length / cpmNum) * 60, cpmNum);
   } else {
     if (!cpmNum2) {
       return "왼쪽 순서를 따라해보세요.";
     }
     return splitMinAndSec(
-      (length / cpmNum2) * 60 + pptNum * pptTerm + watchTime
+      (length / cpmNum2) * 60 + pptNum * pptTerm + watchTime,
+      cpmNum2
     );
   }
 };
 
-function splitMinAndSec(speechTime: number) {
+function splitMinAndSec(speechTime: number, cpm: number) {
   if (speechTime >= 60) {
     return `${Math.floor(speechTime / 60)}분 ${Math.round(
       speechTime - Math.floor(speechTime / 60) * 60
-    )}초`;
+    )}초 (${cpm} cpm)`;
   }
-  return `${Math.round(speechTime)}초`;
+  return `${Math.round(speechTime)}초 (${cpm} cpm)`;
 }
