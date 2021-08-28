@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { colors } from "../../../lib/constants/colors";
 import { useSpeechTime } from "../../../hooks/useSpeechTime";
 import { useRecoilValue } from "recoil";
-import { modeState } from "../../../store";
+import { cpm2State, cpmState, modeState } from "../../../store";
 
 interface Props {
   text?: string;
@@ -11,17 +11,20 @@ interface Props {
 
 function TimeResult({ text }: Props) {
   const [speechTime, setSpeechTime] = useState("0초");
-  const a = useSpeechTime(text);
+  const speechResult = useSpeechTime(text);
+  const mode = useRecoilValue(modeState);
+  const cpm = useRecoilValue(cpmState);
+  const cpm2 = useRecoilValue(cpm2State);
 
   useEffect(() => {
-    setSpeechTime(a);
-  }, [a]);
+    setSpeechTime(speechResult);
+  }, [speechResult]);
 
   return (
     <Styled.Root>
       <div>Speech Time</div>
       <div>
-        {speechTime} ({})
+        {speechTime} ({mode === "Basic" ? cpm : cpm2} cpm)
       </div>
     </Styled.Root>
   );
