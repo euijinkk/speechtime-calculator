@@ -31,7 +31,7 @@ export const useSpeechTime = (text: string) => {
   }
 };
 
-function splitMinAndSec(speechTime: number, cpm: number) {
+function splitMinAndSec(speechTime: number, cpm: number): string {
   if (speechTime >= 60) {
     return `${Math.floor(speechTime / 60)}분 ${Math.round(
       speechTime - Math.floor(speechTime / 60) * 60

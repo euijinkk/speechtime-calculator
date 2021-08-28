@@ -42,7 +42,7 @@ const Styled = {
       color: ${colors.sub_navy};
     }
 
-    button:nth-of-type(1) {
+    & > button:nth-of-type(1) {
       /* background-color: ${({ mode }) =>
         mode === "Basic" ? colors.main_yellow : "white"}; */
 
@@ -82,14 +82,15 @@ const Styled = {
       height: 54px;
       text-align: right;
       line-height: 54px;
-      color: ${colors.gray_dark};
-      color: ${colors.sub_navy};
-      font-weight: bold;
+
       & > button {
         display: inline;
         outline: 0;
         border: 0;
+        background-color: white;
         cursor: pointer;
+        color: ${colors.gray_dark};
+        font-weight: bold;
       }
     }
   `,
