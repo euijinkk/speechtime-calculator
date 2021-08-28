@@ -18,7 +18,7 @@ export default ScrollBarContent;
 
 const Styled = {
   SpeedText: styled.div`
-    margin-bottom: 4px;
+    margin-bottom: 14px;
     line-height: 2;
   `,
 };

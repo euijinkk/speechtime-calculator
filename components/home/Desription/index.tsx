@@ -25,7 +25,8 @@ const Styled = {
     border-radius: 10px;
     background-color: white;
     padding: 0 16px;
-    padding-top: ${({ mode }) => (mode === "Basic" ? "54px" : "32px")};
+    /* padding-top: ${({ mode }) => (mode === "Basic" ? "54px" : "32px")}; */
+    padding-top: 28px;
     width: 480px;
     height: 100%;
     color: ${colors.gray_dark};

@@ -43,7 +43,7 @@ const Styled = {
   Root: styled.div`
     display: flex;
     flex-direction: column;
-    margin-bottom: 62px;
+    margin-bottom: 36px;
     border: 1px solid ${colors.gray_light};
     border-radius: 10px;
     overflow: hidden;

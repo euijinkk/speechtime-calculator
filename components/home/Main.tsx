@@ -18,6 +18,6 @@ const Styled = {
   Root: styled.main`
     display: flex;
     width: 100%;
-    height: 643px;
+    height: 594px;
   `,
 };
