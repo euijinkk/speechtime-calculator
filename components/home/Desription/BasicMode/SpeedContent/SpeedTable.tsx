@@ -26,7 +26,7 @@ const Styled = {
   Root: styled.div`
     display: grid;
     grid-template-rows: repeat(5, 39px);
-    grid-template-columns: repeat(1, 178px 270px);
+    grid-template-columns: repeat(1, 1fr 1.5fr);
     align-items: center;
     justify-content: center;
     border: 1px solid ${colors.gray_light};
@@ -34,10 +34,6 @@ const Styled = {
     width: 100%;
     overflow: hidden;
     color: ${colors.gray_dark};
-    /* 넘치는 것을 hidden 함으로써, container의 border-radius가 item에 정확히 적용되도록 한다 */
-
-    @media ${responsiveSize.tablet} {
-    }
 
     div {
       width: 100%;
@@ -56,6 +52,12 @@ const Styled = {
     div:nth-of-type(9),
     div:nth-of-type(10) {
       border: 0;
+    }
+    /* 넘치는 것을 hidden 함으로써, container의 border-radius가 item에 정확히 적용되도록 한다 */
+
+    @media ${responsiveSize.mobile} {
+      grid-template-rows: repeat(5, 36px);
+      font-size: 12px;
     }
   `,
 };

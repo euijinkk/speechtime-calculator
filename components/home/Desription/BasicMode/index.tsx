@@ -19,7 +19,7 @@ export default BasicMode;
 const Styled = {
   Root: styled.article`
     margin: auto;
-    max-width: 448px;
+    max-width: 484px;
     @media ${responsiveSize.mobile} {
       font-size: 12px;
     }
