@@ -1,15 +1,23 @@
 import React from "react";
+import styled from "@emotion/styled";
 
 import ScrollBarContent from "./ScrollBarContent";
 import SpeedContent from "./SpeedContent";
 
 function BasicMode() {
   return (
-    <article>
+    <Styled.Root>
       <ScrollBarContent />
       <SpeedContent />
-    </article>
+    </Styled.Root>
   );
 }
 
 export default BasicMode;
+
+const Styled = {
+  Root: styled.article`
+    margin: auto;
+    max-width: 484px;
+  `,
+};

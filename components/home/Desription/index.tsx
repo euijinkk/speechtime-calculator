@@ -6,6 +6,7 @@ import { useRecoilValue } from "recoil";
 import { modeState } from "../../../store";
 import BasicMode from "./BasicMode";
 import AdvancedMode from "./AdvancedMode";
+import { responsiveSize } from "../../../lib/constants/size";
 
 function Description() {
   const mode = useRecoilValue(modeState);
@@ -25,10 +26,14 @@ const Styled = {
     border-radius: 10px;
     background-color: white;
     padding: 0 16px;
-    /* padding-top: ${({ mode }) => (mode === "Basic" ? "54px" : "32px")}; */
     padding-top: 28px;
     width: 480px;
     height: 100%;
     color: ${colors.gray_dark};
+
+    @media ${responsiveSize.horizontalTablet} {
+      padding-bottom: 32px;
+      width: 100%;
+    }
   `,
 };

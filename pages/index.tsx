@@ -3,6 +3,7 @@ import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
 import Main from "../components/home/Main";
 import Options from "../components/home/Options";
+import { responsiveSize } from "../lib/constants/size";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ const Styled = {
     max-width: 1190px;
     font-family: "Noto Sans KR";
 
-    @media (max-width: 415px) {
+    @media ${responsiveSize.mobile} {
       margin: 0 16px;
     }
   `,
