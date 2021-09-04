@@ -21,9 +21,13 @@ const Styled = {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin: 0 44px;
     width: 100%;
     max-width: 1190px;
     font-family: "Noto Sans KR";
+
+    @media (max-width: 415px) {
+      margin: 0 16px;
+    }
   `,
 };

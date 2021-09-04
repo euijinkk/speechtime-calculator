@@ -4,6 +4,7 @@ import { useRecoilState } from "recoil";
 import { modeState } from "../../store";
 import { colors } from "../../lib/constants/colors";
 import { css } from "@emotion/react";
+import { responsiveSize } from "../../lib/constants/size";
 
 function Options() {
   const [language, setLanguage] = useState<String>("한국어");
@@ -42,11 +43,11 @@ const Styled = {
       line-height: 54px;
       color: ${colors.sub_navy};
 
-      @media (max-width: 680px) {
+      @media ${responsiveSize.tablet} {
         flex: 1;
       }
 
-      @media (max-width: 415px) {
+      @media ${responsiveSize.mobile} {
         min-width: 168px;
       }
     }
@@ -96,7 +97,7 @@ const Styled = {
         font-weight: bold;
       }
 
-      @media (max-width: 680px) {
+      @media ${responsiveSize.tablet} {
         display: none;
       }
     }
