@@ -53,7 +53,6 @@ const Styled = {
     justify-content: space-between;
     padding: 0 20px;
     height: 48px;
-    font-size: 14px;
     div {
       line-height: 48px;
     }

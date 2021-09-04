@@ -40,7 +40,6 @@ const Styled = {
       height: 100%;
       text-align: center;
       line-height: 39px;
-      font-size: 14px;
     }
     div:nth-of-type(odd) {
       border-bottom: 2px solid white;
@@ -57,7 +56,6 @@ const Styled = {
 
     @media ${responsiveSize.mobile} {
       grid-template-rows: repeat(5, 36px);
-      font-size: 12px;
     }
   `,
 };

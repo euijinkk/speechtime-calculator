@@ -20,6 +20,7 @@ const Styled = {
   Root: styled.article`
     margin: auto;
     max-width: 484px;
+    font-size: 14px;
     @media ${responsiveSize.mobile} {
       font-size: 12px;
     }
