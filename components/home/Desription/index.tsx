@@ -31,7 +31,7 @@ const Styled = {
     height: 100%;
     color: ${colors.gray_dark};
 
-    @media ${responsiveSize.tablet} {
+    @media (max-width: 900px) {
       margin-right: 0px;
       padding-bottom: 32px;
       width: 100%;

@@ -20,7 +20,7 @@ const Styled = {
     display: flex;
     width: 100%;
     height: 594px;
-    @media ${responsiveSize.tablet} {
+    @media (max-width: 900px) {
       flex-direction: column;
       align-items: center;
     }
