@@ -24,5 +24,9 @@ const Styled = {
       flex-direction: column;
       align-items: center;
     }
+
+    @media ${responsiveSize.tablet} {
+      font-size: 12px;
+    }
   `,
 };
