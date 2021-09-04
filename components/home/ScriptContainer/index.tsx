@@ -54,7 +54,9 @@ const Styled = {
     display: flex;
     flex: 1;
     flex-direction: column;
+    width: 100%;
     height: 100%;
+    min-height: 440px;
 
     & > div:nth-of-type(1) {
       position: relative;
