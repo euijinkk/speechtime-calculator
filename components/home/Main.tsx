@@ -23,6 +23,11 @@ const Styled = {
     @media ${responsiveSize.horizontalTablet} {
       flex-direction: column;
       align-items: center;
+      height: 1162px;
+    }
+
+    @media ${responsiveSize.mobile} {
+      height: 1007px;
     }
   `,
 };

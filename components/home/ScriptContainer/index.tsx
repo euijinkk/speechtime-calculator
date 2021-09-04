@@ -6,6 +6,7 @@ import countWords from "../../../lib/utils/countWords";
 import countBytes from "../../../lib/utils/countBytes";
 import countCharacters from "../../../lib/utils/countCharacters";
 import TimeResult from "./TimeResult";
+import { responsiveSize } from "../../../lib/constants/size";
 
 function ScriptContainer() {
   const [wordsNum, setWordsNum] = useState(0);
@@ -74,6 +75,9 @@ const Styled = {
       width: 100%;
       height: 90%;
       resize: none;
+      @media ${responsiveSize.mobile} {
+        font-size: 13px;
+      }
     }
   `,
   textareaContainer: styled.div`

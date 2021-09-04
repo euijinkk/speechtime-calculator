@@ -4,6 +4,7 @@ import { colors } from "../../../lib/constants/colors";
 import { useSpeechTime } from "../../../hooks/useSpeechTime";
 import { useRecoilValue } from "recoil";
 import { cpm2State, cpmState, modeState } from "../../../store";
+import { responsiveSize } from "../../../lib/constants/size";
 
 interface Props {
   text?: string;
@@ -34,7 +35,7 @@ const Styled = {
     width: 100%;
     min-height: 64px;
     color: ${colors.sub_navy};
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 
     div {
@@ -51,6 +52,9 @@ const Styled = {
     div:nth-of-type(2) {
       background-color: white;
       width: 60%;
+    }
+    @media ${responsiveSize.mobile} {
+      font-size: 14px;
     }
   `,
 };

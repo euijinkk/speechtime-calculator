@@ -55,10 +55,24 @@ const Styled = {
     a:nth-of-type(1) > img {
       margin-right: 12px;
     }
+    @media (max-width: 610px) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      margin-top: 24px;
+      & > div:nth-of-type(1) {
+        margin-top: 12px;
+      }
+    }
   `,
   Bottom: styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    & > div:nth-of-type(2) {
+      margin-top: 24px;
+    }
+    @media (max-width: 610px) {
+      flex-direction: column;
+    }
   `,
 };
