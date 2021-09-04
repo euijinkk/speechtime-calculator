@@ -11,8 +11,16 @@ function Footer() {
       <Styled.Middle>
         <div>Feedback</div>
         <div>
-          <img src="/assets/icons/github.svg" alt="github" />
-          <img src="/assets/icons/github.svg" alt="youtube" />
+          <a
+            href="https://github.com/euijinkk"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/assets/icons/github.svg" alt="github" />
+          </a>
+          <a href="https://google.com" target="_blank" rel="noreferrer">
+            <img src="/assets/icons/github.svg" alt="youtube" />
+          </a>
         </div>
       </Styled.Middle>
       <Styled.Bottom>
@@ -27,6 +35,8 @@ export default Footer;
 
 const Styled = {
   Root: styled.footer`
+    margin-top: 80px;
+    padding-bottom: 32px;
     width: 100%;
     font-size: 12px;
   `,
@@ -36,10 +46,19 @@ const Styled = {
   `,
   Middle: styled.div`
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
+    margin-top: 10px;
+    img {
+      cursor: pointer;
+    }
+    a:nth-of-type(1) > img {
+      margin-right: 12px;
+    }
   `,
   Bottom: styled.div`
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
   `,
 };
