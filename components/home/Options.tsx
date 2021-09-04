@@ -36,16 +36,22 @@ const Styled = {
       background-color: white;
       cursor: pointer;
       width: 17.5%;
+      min-width: 277px;
       height: 54px;
       text-align: center;
       line-height: 54px;
       color: ${colors.sub_navy};
+
+      @media (max-width: 680px) {
+        flex: 1;
+      }
+
+      @media (max-width: 415px) {
+        min-width: 168px;
+      }
     }
 
     & > button:nth-of-type(1) {
-      /* background-color: ${({ mode }) =>
-        mode === "Basic" ? colors.main_yellow : "white"}; */
-
       ${({ mode }) =>
         mode === "Basic"
           ? css`
@@ -58,9 +64,7 @@ const Styled = {
             `}
     }
 
-    button:nth-of-type(2) {
-      /* background-color: ${({ mode }) =>
-        mode === "Basic" ? "white" : colors.main_yellow}; */
+    & > button:nth-of-type(2) {
       ${({ mode }) =>
         mode === "Basic"
           ? css`
@@ -75,7 +79,6 @@ const Styled = {
     & > div {
       flex: 1;
       margin: 0;
-
       border-radius: 10px;
       background-color: white;
       padding-right: 24px;
@@ -91,6 +94,10 @@ const Styled = {
         cursor: pointer;
         color: ${colors.gray_dark};
         font-weight: bold;
+      }
+
+      @media (max-width: 680px) {
+        display: none;
       }
     }
   `,
