@@ -19,9 +19,14 @@ export default BasicMode;
 const Styled = {
   Root: styled.article`
     margin: auto;
-    max-width: 484px;
+    width: 100%;
+    max-width: 450px;
     font-size: 14px;
+    /* @media ${responsiveSize.tablet} {
+      max-width: 1000px;
+    } */
     @media ${responsiveSize.mobile} {
+      /* min-width: 0px; */
       font-size: 12px;
     }
   `,

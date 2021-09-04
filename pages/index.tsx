@@ -22,13 +22,14 @@ const Styled = {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 44px;
+    margin: auto;
+    padding: 0 44px;
     width: 100%;
-    max-width: 1190px;
+    max-width: 1276px;
     font-family: "Noto Sans KR";
 
     @media ${responsiveSize.mobile} {
-      margin: 0 16px;
+      padding: 0 16px;
     }
   `,
 };

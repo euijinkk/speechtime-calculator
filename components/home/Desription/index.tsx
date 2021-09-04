@@ -27,13 +27,19 @@ const Styled = {
     background-color: white;
     padding: 0 16px;
     padding-top: 28px;
-    width: 480px;
+    width: 484px;
     height: 100%;
     color: ${colors.gray_dark};
 
     @media ${responsiveSize.tablet} {
+      margin-right: 0px;
       padding-bottom: 32px;
       width: 100%;
+      min-width: 484px;
+    }
+    /* 480~590 사이에서 min-width:484 때문에 화면이 뭉개지는 현상 해결 */
+    @media (max-width: 590px) {
+      min-width: 0px;
     }
   `,
 };

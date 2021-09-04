@@ -45,10 +45,10 @@ const Styled = {
 
       @media ${responsiveSize.tablet} {
         flex: 1;
+        min-width: 0px;
       }
 
       @media ${responsiveSize.mobile} {
-        min-width: 168px;
       }
     }
 
