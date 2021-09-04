@@ -4,7 +4,7 @@
 // };
 
 export const responsiveSize = {
-  horizontalTablet: "(max-width: 1024px)",
+  horizontalTablet: "(max-width: 900px)",
   tablet: "(max-width: 768px)",
   mobile: "(max-width: 480px)",
 };

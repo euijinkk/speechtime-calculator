@@ -31,8 +31,9 @@ const Styled = {
     height: 100%;
     color: ${colors.gray_dark};
 
-    @media (max-width: 900px) {
+    @media ${responsiveSize.horizontalTablet} {
       margin-right: 0px;
+      margin-bottom: 8px;
       padding-bottom: 32px;
       width: 100%;
       min-width: 484px;
