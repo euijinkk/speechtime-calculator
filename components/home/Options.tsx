@@ -66,6 +66,9 @@ const Styled = {
     }
 
     & > button:nth-of-type(2) {
+      @media ${responsiveSize.tablet} {
+        margin-right: 0;
+      }
       ${({ mode }) =>
         mode === "Basic"
           ? css`
