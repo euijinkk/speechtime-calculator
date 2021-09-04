@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { colors } from "../../../../../lib/constants/colors";
+import { responsiveSize } from "../../../../../lib/constants/size";
 
 function SpeedTable() {
   return (
@@ -30,9 +31,13 @@ const Styled = {
     justify-content: center;
     border: 1px solid ${colors.gray_light};
     border-radius: 10px;
+    width: 100%;
     overflow: hidden;
     color: ${colors.gray_dark};
     /* 넘치는 것을 hidden 함으로써, container의 border-radius가 item에 정확히 적용되도록 한다 */
+
+    @media ${responsiveSize.tablet} {
+    }
 
     div {
       width: 100%;
