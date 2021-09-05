@@ -7,6 +7,7 @@ import {
   pptTermState,
   watchTimeState,
 } from "../../../../../store";
+import { responsiveSize } from "../../../../../lib/constants/size";
 
 function PptSection() {
   const [pptNum, setPptNum] = useRecoilState(pptNumState);
@@ -57,7 +58,7 @@ function PptSection() {
           >
             <Styled.HLine />
           </Styled.OperatorContainer>
-          {pptNum} 장
+          <div>{pptNum} 장</div>
           <Styled.OperatorContainer
             operator="right"
             onClick={() => handleClick("pptNum", "+")}
@@ -74,7 +75,7 @@ function PptSection() {
           >
             <Styled.HLine />
           </Styled.OperatorContainer>
-          {pptTerm} 초
+          <div>{pptTerm} 초</div>
           <Styled.OperatorContainer
             operator="right"
             onClick={() => handleClick("pptTerm", "+")}
@@ -91,7 +92,7 @@ function PptSection() {
           >
             <Styled.HLine />
           </Styled.OperatorContainer>
-          {watchTime} 초
+          <div>{watchTime} 초</div>
           <Styled.OperatorContainer
             operator="right"
             onClick={() => handleClick("watchTime", "+")}
@@ -137,8 +138,11 @@ const Styled = {
       background-color: ${colors.gray_light};
     }
     & > div:nth-of-type(even) {
+      display: flex;
       position: relative;
+      justify-content: space-evenly;
       border-bottom: 2px solid ${colors.gray_light};
+      padding: 0 20px;
     }
     & > div:nth-of-type(5),
     & > div:nth-of-type(6) {
@@ -147,27 +151,21 @@ const Styled = {
   `,
   OperatorContainer: styled.div<{ operator: string }>`
     display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     align-items: center;
-    transform: translate(
-      ${({ operator }) => (operator === "left" ? "75px" : "180px")},
-      12px
-    );
+    transform: translateY(12px);
     cursor: pointer;
     width: 15px;
     height: 15px;
   `,
   HLine: styled.div`
-    position: absolute;
     background-color: #333333;
     width: 15px;
     height: 2px;
   `,
   VLine: styled.div`
     position: absolute;
-    left: 7.5px;
+    left: 6.5px;
     background-color: #333333;
     width: 2px;
     height: 15px;
