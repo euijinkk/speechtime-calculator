@@ -40,6 +40,7 @@ const Styled = {
     }
     /* 480~590 사이에서 min-width:484 때문에 화면이 뭉개지는 현상 해결 */
     @media (max-width: 590px) {
+      padding-top: 20px;
       min-width: 0px;
     }
   `,
