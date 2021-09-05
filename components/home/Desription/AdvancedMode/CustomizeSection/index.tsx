@@ -55,7 +55,6 @@ const Styled = {
   Root: styled.section`
     textarea {
       margin-bottom: 26px;
-      outline: 0;
       border: 1px solid ${colors.gray_light};
       border-radius: 10px;
       padding: 12px 15px;

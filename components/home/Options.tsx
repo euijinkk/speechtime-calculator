@@ -31,8 +31,6 @@ const Styled = {
     width: 100%;
     & > button {
       margin-right: 8px;
-      outline: 0;
-      border: 0;
       border-radius: 10px;
       background-color: white;
       cursor: pointer;
@@ -95,8 +93,6 @@ const Styled = {
 
       & > button {
         display: inline;
-        outline: 0;
-        border: 0;
         background-color: white;
         cursor: pointer;
         color: ${colors.gray_dark};
