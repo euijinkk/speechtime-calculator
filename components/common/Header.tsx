@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { colors } from "../../lib/constants/colors";
+import { responsiveSize } from "../../lib/constants/size";
 
 function Header() {
   return (
@@ -20,6 +21,10 @@ const Styled = {
     margin-top: 24px;
     margin-bottom: 22px;
     width: 100%;
+    @media ${responsiveSize.mobile} {
+      margin-top: 16px;
+      margin-bottom: 18px;
+    }
   `,
   Logo: styled.img`
     margin-right: 12px;
@@ -29,5 +34,9 @@ const Styled = {
     color: ${colors.sub_navy};
     font-size: 32px;
     font-weight: bold;
+
+    @media ${responsiveSize.mobile} {
+      font-size: 22px;
+    }
   `,
 };

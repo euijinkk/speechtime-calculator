@@ -19,7 +19,7 @@ const Styled = {
   Root: styled.main`
     display: flex;
     width: 100%;
-    height: 594px;
+    height: 620px;
     @media ${responsiveSize.horizontalTablet} {
       flex-direction: column;
       align-items: center;

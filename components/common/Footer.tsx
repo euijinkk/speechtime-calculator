@@ -18,13 +18,13 @@ function Footer() {
           >
             <img src="/assets/icons/github.svg" alt="github" />
           </a>
-          <a href="https://google.com" target="_blank" rel="noreferrer">
+          {/* <a href="https://google.com" target="_blank" rel="noreferrer">
             <img src="/assets/icons/github.svg" alt="youtube" />
-          </a>
+          </a> */}
         </div>
       </Styled.Middle>
       <Styled.Bottom>
-        <div>speechtime-calculator@gmail.com</div>
+        <div>euijinkk97@gmail.com</div>
         <div>© 2021. speechtime-calculator. all rights reserved.</div>
       </Styled.Bottom>
     </Styled.Root>
@@ -53,7 +53,7 @@ const Styled = {
       cursor: pointer;
     }
     a:nth-of-type(1) > img {
-      margin-right: 12px;
+      /* margin-right: 12px; */
     }
     @media (max-width: 610px) {
       flex-direction: column-reverse;

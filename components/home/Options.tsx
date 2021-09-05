@@ -38,9 +38,9 @@ const Styled = {
       cursor: pointer;
       width: 17.5%;
       min-width: 277px;
-      height: 54px;
+      height: 50px;
       text-align: center;
-      line-height: 54px;
+      line-height: 50px;
       color: ${colors.sub_navy};
 
       @media ${responsiveSize.tablet} {
@@ -49,6 +49,8 @@ const Styled = {
       }
 
       @media ${responsiveSize.mobile} {
+        height: 45px;
+        line-height: 45px;
         font-size: 14px;
       }
     }
@@ -87,9 +89,9 @@ const Styled = {
       border-radius: 10px;
       background-color: white;
       padding-right: 24px;
-      height: 54px;
+      height: 50px;
       text-align: right;
-      line-height: 54px;
+      line-height: 50px;
 
       & > button {
         display: inline;
