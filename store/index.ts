@@ -34,3 +34,8 @@ export const textState = atom<string>({
   key: "textState",
   default: "",
 });
+
+export const isAccordianOpenedState = atom({
+  key: "isAccordianOpened",
+  default: false,
+});
