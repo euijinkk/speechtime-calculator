@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { colors } from "../../../../../lib/constants/colors";
 import addZero from "../../../../../lib/utils/addZero";
 import { useCallback } from "react";
+import { responsiveSize } from "../../../../../lib/constants/size";
 
 function StopWatch() {
   const [startTime, setStartTime] = useState(0);
@@ -98,7 +99,20 @@ const Styled = {
         height: 44px;
         text-align: center;
         line-height: 44px;
+        @media ${responsiveSize.mobile} {
+          height: 40px;
+          line-height: 40px;
+        }
       }
+    }
+
+    @media ${responsiveSize.horizontalTablet} {
+      font-size: 18px;
+    }
+    @media ${responsiveSize.mobile} {
+      height: 44px;
+      line-height: 44px;
+      font-size: 14px;
     }
   `,
   Reset: styled.div`
