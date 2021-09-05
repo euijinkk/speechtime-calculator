@@ -22,7 +22,7 @@ export const useSpeechTime = (text: string) => {
     return splitMinAndSec((length / cpmNum) * 60, cpmNum);
   } else {
     if (!cpmNum2) {
-      return "왼쪽 순서를 따라해보세요.";
+      return "위 순서를 따라해보세요.";
     }
     return splitMinAndSec(
       (length / cpmNum2) * 60 + pptNum * pptTerm + watchTime,
