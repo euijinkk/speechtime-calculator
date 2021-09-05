@@ -58,7 +58,7 @@ const Styled = {
       border: 1px solid ${colors.gray_light};
       border-radius: 10px;
       padding: 12px 15px;
-      width: 448px;
+      width: 100%;
       height: 109px;
       resize: none;
     }
