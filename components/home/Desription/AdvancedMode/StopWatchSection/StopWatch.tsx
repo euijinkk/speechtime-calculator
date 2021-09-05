@@ -90,7 +90,7 @@ const Styled = {
 
     & ~ div {
       display: flex;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
 
       & > div {
         flex: 5;
@@ -103,6 +103,9 @@ const Styled = {
           height: 40px;
           line-height: 40px;
         }
+      }
+      @media ${responsiveSize.mobile} {
+        margin-bottom: 16px;
       }
     }
 

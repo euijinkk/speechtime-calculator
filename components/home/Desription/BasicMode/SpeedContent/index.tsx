@@ -1,6 +1,7 @@
 import React from "react";
 import SpeedTable from "./SpeedTable";
 import styled from "@emotion/styled";
+import { responsiveSize } from "../../../../../lib/constants/size";
 
 function SpeedContent() {
   return (
@@ -19,5 +20,9 @@ const Styled = {
   TableText: styled.div`
     margin-bottom: 22px;
     line-height: 2;
+
+    @media ${responsiveSize.mobile} {
+      margin-bottom: 12px;
+    }
   `,
 };

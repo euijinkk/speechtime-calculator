@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import ScrollBarContainer from "./ScrollBarContainer";
+import { responsiveSize } from "../../../../../lib/constants/size";
 
 function ScrollBarContent() {
   return (
@@ -22,5 +23,9 @@ const Styled = {
   SpeedText: styled.div`
     margin-bottom: 14px;
     line-height: 2;
+
+    @media ${responsiveSize.mobile} {
+      margin-bottom: 10px;
+    }
   `,
 };

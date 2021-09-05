@@ -4,6 +4,7 @@ import { useRecoilState } from "recoil";
 import { cpmState } from "../../../../../store";
 import { colors } from "../../../../../lib/constants/colors";
 import { useEffect } from "react";
+import { responsiveSize } from "../../../../../lib/constants/size";
 
 function ScrollBarContainer() {
   const [cpm, setCpm] = useRecoilState(cpmState);
@@ -47,6 +48,9 @@ const Styled = {
     border: 1px solid ${colors.gray_light};
     border-radius: 10px;
     overflow: hidden;
+    @media ${responsiveSize.mobile} {
+      margin-bottom: 24px;
+    }
   `,
   CpmContainer: styled.div`
     display: flex;
@@ -100,6 +104,9 @@ const Styled = {
         width: 25px; /* Set a specific slider handle width */
         height: 25px; /* Slider handle height */
       }
+    }
+    @media ${responsiveSize.mobile} {
+      height: 44px;
     }
   `,
 };
