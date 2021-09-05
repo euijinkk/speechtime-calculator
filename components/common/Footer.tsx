@@ -68,11 +68,12 @@ const Styled = {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-    & > div:nth-of-type(2) {
-      margin-top: 24px;
-    }
+
     @media (max-width: 610px) {
       flex-direction: column;
+      & > div:nth-of-type(2) {
+        margin-top: 24px;
+      }
     }
   `,
 };
