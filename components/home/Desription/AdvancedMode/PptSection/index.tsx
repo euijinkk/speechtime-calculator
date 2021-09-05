@@ -46,7 +46,8 @@ function PptSection() {
   return (
     <Styled.Root>
       <Styled.PptText>
-        ∙ PPT의 장수, 슬라이드 전환 시간, 자료 감상 시간을 고려해주세요.
+        ∙ PPT의 장수, 슬라이드 전환 시간, 자료 감상 시간이 전체 발표 시간에
+        합산됩니다.
       </Styled.PptText>
       {/* 여기 컴포넌트 분리해서 재사용성을 높이면 좋을 것 같은데, 어떻게 변수를 지정해야할지 모르겠다. */}
       <Styled.PptTable>
