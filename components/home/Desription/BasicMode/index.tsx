@@ -12,16 +12,16 @@ function BasicMode() {
   console.log(`isMobile`, isMobile);
   return (
     <Styled.Root>
-      {isMobile && isAccordianOpened ? (
-        <>
-          <ScrollBarContent setIsAccordianOpened={setIsAccordianOpened} />
-          <SpeedContent />
-        </>
-      ) : (
+      {isMobile && !isAccordianOpened ? (
         <Styled.ClosedAccordian onClick={() => setIsAccordianOpened(true)}>
           <div>∙ 말하는 속도를 지정해주세요.</div>
           <button />
         </Styled.ClosedAccordian>
+      ) : (
+        <>
+          <ScrollBarContent setIsAccordianOpened={setIsAccordianOpened} />
+          <SpeedContent />
+        </>
       )}
     </Styled.Root>
   );
