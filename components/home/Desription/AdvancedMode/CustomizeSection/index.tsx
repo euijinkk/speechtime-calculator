@@ -61,7 +61,6 @@ const Styled = {
       width: 448px;
       height: 109px;
       resize: none;
-      font-size: 14px;
     }
   `,
   CustomizeText: styled.div`
