@@ -28,7 +28,7 @@ const Styled = {
     padding: 0 16px;
     padding-top: 28px;
     width: 484px;
-    height: 100%;
+    /* height: 100%; */
     color: ${colors.gray_dark};
 
     @media ${responsiveSize.horizontalTablet} {

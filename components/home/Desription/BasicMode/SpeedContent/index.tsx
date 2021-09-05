@@ -18,5 +18,6 @@ export default SpeedContent;
 const Styled = {
   TableText: styled.div`
     margin-bottom: 22px;
+    line-height: 2;
   `,
 };

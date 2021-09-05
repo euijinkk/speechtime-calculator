@@ -57,7 +57,6 @@ const Styled = {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    min-height: 440px;
 
     & > div:nth-of-type(1) {
       position: relative;
@@ -75,9 +74,19 @@ const Styled = {
       width: 100%;
       height: 90%;
       resize: none;
+
+      @media ${responsiveSize.horizontalTablet} {
+        height: 390px;
+        /* height: 440px; */
+      }
       @media ${responsiveSize.mobile} {
         font-size: 13px;
       }
+    }
+    /* min-height: 440px; */
+
+    @media ${responsiveSize.horizontalTablet} {
+      height: 512px;
     }
   `,
   textareaContainer: styled.div`
@@ -85,5 +94,8 @@ const Styled = {
     background-color: white;
     width: 100%;
     height: 100%;
+    @media ${responsiveSize.horizontalTablet} {
+      height: 440px;
+    }
   `,
 };

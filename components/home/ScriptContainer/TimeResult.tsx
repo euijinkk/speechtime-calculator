@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { colors } from "../../../lib/constants/colors";
 import { useSpeechTime } from "../../../hooks/useSpeechTime";
-import { useRecoilValue } from "recoil";
-import { cpm2State, cpmState, modeState } from "../../../store";
 import { responsiveSize } from "../../../lib/constants/size";
 
 interface Props {
@@ -46,6 +44,7 @@ const Styled = {
     }
 
     div:nth-of-type(1) {
+      margin-right: 8px;
       background-color: ${colors.main_yellow};
       width: 40%;
     }

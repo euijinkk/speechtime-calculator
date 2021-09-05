@@ -19,6 +19,8 @@ export default AdvancedMode;
 
 const Styled = {
   Root: styled.article`
+    margin: auto;
+    max-width: 450px;
     color: ${colors.gray_dark};
     font-size: 14px;
   `,

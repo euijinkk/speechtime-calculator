@@ -111,6 +111,7 @@ const Styled = {
   Root: styled.section``,
   PptText: styled.div`
     margin-bottom: 22px;
+    line-height: 2;
   `,
   PptTable: styled.div`
     display: grid;
@@ -128,7 +129,7 @@ const Styled = {
       width: 100%;
       height: 100%;
       text-align: center;
-      line-height: 39px;
+      line-height: 2;
       font-size: 14px;
     }
     & > div:nth-of-type(odd) {

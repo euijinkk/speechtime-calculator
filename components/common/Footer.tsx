@@ -35,7 +35,7 @@ export default Footer;
 
 const Styled = {
   Root: styled.footer`
-    margin-top: 80px;
+    margin-top: 50px;
     padding-bottom: 32px;
     width: 100%;
     font-size: 12px;
