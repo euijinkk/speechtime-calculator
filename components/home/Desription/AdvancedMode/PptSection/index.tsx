@@ -116,7 +116,7 @@ const Styled = {
   PptTable: styled.div`
     display: grid;
     grid-template-rows: repeat(3, 39px);
-    grid-template-columns: repeat(1, 178px 270px);
+    grid-template-columns: repeat(1, 1fr 1.5fr);
     align-items: center;
     justify-content: center;
     border: 1px solid ${colors.gray_light};
@@ -129,7 +129,7 @@ const Styled = {
       width: 100%;
       height: 100%;
       text-align: center;
-      line-height: 2;
+      line-height: 39px;
       font-size: 14px;
     }
     & > div:nth-of-type(odd) {

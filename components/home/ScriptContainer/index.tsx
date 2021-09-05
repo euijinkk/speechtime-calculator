@@ -77,13 +77,11 @@ const Styled = {
 
       @media ${responsiveSize.horizontalTablet} {
         height: 390px;
-        /* height: 440px; */
       }
       @media ${responsiveSize.mobile} {
         font-size: 13px;
       }
     }
-    /* min-height: 440px; */
 
     @media ${responsiveSize.horizontalTablet} {
       height: 512px;
