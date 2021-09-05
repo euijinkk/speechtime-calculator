@@ -49,6 +49,7 @@ const Styled = {
       }
 
       @media ${responsiveSize.mobile} {
+        font-size: 14px;
       }
     }
 
