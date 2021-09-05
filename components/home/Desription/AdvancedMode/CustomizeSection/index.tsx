@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { colors } from "../../../../../lib/constants/colors";
 import { cpm2State, textState } from "../../../../../store";
 import { useRecoilState, useSetRecoilState } from "recoil";
+import { responsiveSize } from "../../../../../lib/constants/size";
 
 function CustomizeSection() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -61,6 +62,9 @@ const Styled = {
       width: 100%;
       height: 109px;
       resize: none;
+      @media ${responsiveSize.mobile} {
+        margin-bottom: 22px;
+      }
     }
   `,
   CustomizeText: styled.div`

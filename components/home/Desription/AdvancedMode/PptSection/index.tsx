@@ -114,6 +114,9 @@ const Styled = {
   PptText: styled.div`
     margin-bottom: 22px;
     line-height: 2;
+    @media ${responsiveSize.mobile} {
+      margin-bottom: 14px;
+    }
   `,
   PptTable: styled.div`
     display: grid;
