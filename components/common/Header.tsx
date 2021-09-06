@@ -2,11 +2,19 @@ import React from "react";
 import styled from "@emotion/styled";
 import { colors } from "../../lib/constants/colors";
 import { responsiveSize } from "../../lib/constants/size";
+import { useHorizontalTablet } from "../../hooks/DeviceType";
 
 function Header() {
+  const isHorizontalTablet = useHorizontalTablet();
+
   return (
     <Styled.Root>
-      <Styled.Logo src="assets/images/logo.svg" alt="Logo" />
+      <Styled.Logo
+        src={`/assets/images/${
+          isHorizontalTablet ? "tabletLogo" : "desktopLogo"
+        }.svg`}
+        alt="Logo"
+      />
       <Styled.SiteName>발표시간 - 계산기</Styled.SiteName>
     </Styled.Root>
   );
@@ -34,9 +42,5 @@ const Styled = {
     color: ${colors.sub_navy};
     font-size: 32px;
     font-weight: bold;
-
-    @media ${responsiveSize.mobile} {
-      font-size: 22px;
-    }
   `,
 };

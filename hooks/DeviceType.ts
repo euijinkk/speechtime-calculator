@@ -6,3 +6,10 @@ export const useMobile = () => {
 
   return isMobile;
 };
+
+export const useHorizontalTablet = () => {
+  const size = useWindowSize();
+  const isHorizontalTablet = size && size.width <= 900;
+
+  return isHorizontalTablet;
+};
