@@ -14,23 +14,6 @@ function BasicMode() {
     isAccordianOpenedState
   );
 
-  const isAccordianOpenedRef = useRef<boolean | null | undefined>(null);
-
-  useEffect(() => {
-    isAccordianOpenedRef.current = isAccordianOpened;
-  }, [isAccordianOpened]);
-
-  useEffect(() => {
-    setIsAccordianOpened(isAccordianOpenedRef.current);
-    return () => {
-      // isAccordianOpenedRef.current = isAccordianOpened;
-      // unMount시, state값인 isAccordianOpened는 가지고 올 수 없다.
-    };
-  }, []);
-  // 1. useState로 선언 시, 렌더링 시 매번 초기값으로 초기화되는 문제 -> isAccordianOpened를 recoil로 선언하였음.
-  // 2. isAccordianOpenedRef를 사용한 이유. Ref는 생명주기에 곤계없이, 계속 값을 유지하도록 해준다. useState는 생명주기를 타기 때문에, unMount시 값을 가지고 올 수 없는 문제.
-  // 3. isAccordianOpened이 변할때마다 Ref변수를 계속 업데이트해주고 있다. 컴포넌트가 unMount될때 한번만 업데이트해주면 좋을텐데, unMount될때듣 state값은 가지고 올 수 없는 상태이다.
-
   return (
     <Styled.Root>
       {isMobile && !isAccordianOpened ? (
