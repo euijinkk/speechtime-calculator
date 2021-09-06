@@ -43,6 +43,23 @@ function PptSection() {
     }
   };
 
+  const handleChange = (
+    type: string,
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    switch (type) {
+      case "pptNum":
+        setPptNum(e.target.valueAsNumber);
+        break;
+      case "pptTerm":
+        setPptTerm(e.target.valueAsNumber);
+        break;
+      case "watchTime":
+        setWatchTime(e.target.valueAsNumber);
+        break;
+    }
+  };
+
   return (
     <Styled.Root>
       <Styled.PptText>
@@ -59,7 +76,14 @@ function PptSection() {
           >
             <Styled.HLine />
           </Styled.OperatorContainer>
-          <div>{pptNum} 장</div>
+          <form onSubmit={(e) => e.preventDefault()}>
+            <input
+              type="number"
+              value={pptNum}
+              onChange={(e) => handleChange("pptNum", e)}
+            />{" "}
+            장
+          </form>
           <Styled.OperatorContainer
             operator="right"
             onClick={() => handleClick("pptNum", "+")}
@@ -76,7 +100,14 @@ function PptSection() {
           >
             <Styled.HLine />
           </Styled.OperatorContainer>
-          <div>{pptTerm} 초</div>
+          <form onSubmit={(e) => e.preventDefault()}>
+            <input
+              type="number"
+              value={pptTerm}
+              onChange={(e) => handleChange("pptTerm", e)}
+            />{" "}
+            장
+          </form>
           <Styled.OperatorContainer
             operator="right"
             onClick={() => handleClick("pptTerm", "+")}
@@ -93,7 +124,14 @@ function PptSection() {
           >
             <Styled.HLine />
           </Styled.OperatorContainer>
-          <div>{watchTime} 초</div>
+          <form onSubmit={(e) => e.preventDefault()}>
+            <input
+              type="number"
+              value={watchTime}
+              onChange={(e) => handleChange("watchTime", e)}
+            />{" "}
+            장
+          </form>
           <Styled.OperatorContainer
             operator="right"
             onClick={() => handleClick("watchTime", "+")}
@@ -129,6 +167,17 @@ const Styled = {
     overflow: hidden;
     color: ${colors.gray_dark};
     /* 넘치는 것을 hidden 함으로써, container의 border-radius가 item에 정확히 적용되도록 한다 */
+
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    input {
+      outline: 0;
+      border: 0;
+      width: 26px;
+      text-align: center;
+    }
 
     & > div {
       width: 100%;
