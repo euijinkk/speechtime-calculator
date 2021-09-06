@@ -2,16 +2,21 @@ import React from "react";
 import styled from "@emotion/styled";
 import { colors } from "../../lib/constants/colors";
 import { responsiveSize } from "../../lib/constants/size";
-import { useHorizontalTablet } from "../../hooks/DeviceType";
+import { useHorizontalTablet, useMobile } from "../../hooks/DeviceType";
 
 function Header() {
   const isHorizontalTablet = useHorizontalTablet();
+  const isMobile = useMobile();
 
   return (
     <Styled.Root>
       <Styled.Logo
         src={`/assets/images/${
-          isHorizontalTablet ? "tabletLogo" : "desktopLogo"
+          isMobile
+            ? "mobileLogo"
+            : isHorizontalTablet
+            ? "tabletLogo"
+            : "desktopLogo"
         }.svg`}
         alt="Logo"
       />
@@ -42,5 +47,8 @@ const Styled = {
     color: ${colors.sub_navy};
     font-size: 32px;
     font-weight: bold;
+    @media ${responsiveSize.mobile} {
+      font-size: 22px;
+    }
   `,
 };
