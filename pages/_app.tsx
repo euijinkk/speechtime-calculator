@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <RecoilRoot>
       <Head>
         <title>발표시간 계산기</title>
-        <link rel="icon" href="/assets/logo.svg" />
+        <link rel="icon" href="/assets/images/mobileLogo.svg" />
         <meta charSet="UTF-8" />
         <meta
           name="viewport"
@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="발표시간 계산기" />
         <meta
           property="og:url"
-          content="https://speechtime-calculator.vercel.app/"
+          content="https://speechtime-calculator-lime.vercel.app/"
         />
         <meta property="og:site_name" content="발표시간 계산기" />
         <meta
