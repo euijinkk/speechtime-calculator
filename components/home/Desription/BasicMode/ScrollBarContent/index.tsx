@@ -12,14 +12,14 @@ function ScrollBarContent() {
 
   return (
     <>
-      <Styled.SpeedText>
+      <Styled.SpeedText onClick={() => setIsAccordianOpened(false)}>
         {/* ∙ 말하는 속도를 지정해주세요. 해당 속도에 맞춰 전체 스크립트의 <br />
         &nbsp;&nbsp;&nbsp;&nbsp;발표 시간이 계산됩니다. */}
         <div>
           ∙ 말하는 속도를 지정해주세요. 해당 속도에 맞춰 전체 스크립트의 발표
           시간이 계산됩니다.
         </div>
-        {isMobile && <button onClick={() => setIsAccordianOpened(false)} />}
+        {isMobile && <button />}
       </Styled.SpeedText>
       <ScrollBarContainer />
     </>
