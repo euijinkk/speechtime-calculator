@@ -8,6 +8,7 @@ import {
   watchTimeState,
 } from "../../../../../store";
 import { responsiveSize } from "../../../../../lib/constants/size";
+import PptItem from "./PptItem";
 
 function PptSection() {
   const [pptNum, setPptNum] = useRecoilState(pptNumState);
@@ -66,80 +67,25 @@ function PptSection() {
         ∙ PPT의 장수, 슬라이드 전환 시간, 자료 감상 시간이 전체 발표 시간에
         합산됩니다.
       </Styled.PptText>
-      {/* 여기 컴포넌트 분리해서 재사용성을 높이면 좋을 것 같은데, 어떻게 변수를 지정해야할지 모르겠다. */}
       <Styled.PptTable>
-        <div> PPT 수</div>
-        <div>
-          <Styled.OperatorContainer
-            operator="left"
-            onClick={() => handleClick("pptNum", "-")}
-          >
-            <Styled.HLine />
-          </Styled.OperatorContainer>
-          <form onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="number"
-              value={pptNum}
-              onChange={(e) => handleChange("pptNum", e)}
-            />{" "}
-            장
-          </form>
-          <Styled.OperatorContainer
-            operator="right"
-            onClick={() => handleClick("pptNum", "+")}
-          >
-            <Styled.HLine />
-            <Styled.VLine />
-          </Styled.OperatorContainer>
-        </div>
-        <div>슬라이드 전환 시간</div>
-        <div>
-          <Styled.OperatorContainer
-            operator="left"
-            onClick={() => handleClick("pptTerm", "-")}
-          >
-            <Styled.HLine />
-          </Styled.OperatorContainer>
-          <form onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="number"
-              value={pptTerm}
-              onChange={(e) => handleChange("pptTerm", e)}
-            />{" "}
-            장
-          </form>
-          <Styled.OperatorContainer
-            operator="right"
-            onClick={() => handleClick("pptTerm", "+")}
-          >
-            <Styled.HLine />
-            <Styled.VLine />
-          </Styled.OperatorContainer>
-        </div>
-        <div>자료 감상 시간</div>
-        <div>
-          <Styled.OperatorContainer
-            operator="left"
-            onClick={() => handleClick("watchTime", "-")}
-          >
-            <Styled.HLine />
-          </Styled.OperatorContainer>
-          <form onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="number"
-              value={watchTime}
-              onChange={(e) => handleChange("watchTime", e)}
-            />{" "}
-            장
-          </form>
-          <Styled.OperatorContainer
-            operator="right"
-            onClick={() => handleClick("watchTime", "+")}
-          >
-            <Styled.HLine />
-            <Styled.VLine />
-          </Styled.OperatorContainer>
-        </div>
+        <PptItem
+          type="PPT 수"
+          unit="장"
+          pptState={pptNum}
+          setPptState={setPptNum}
+        />
+        <PptItem
+          type="슬라이드 전환 시간"
+          unit="초"
+          pptState={pptTerm}
+          setPptState={setPptTerm}
+        />
+        <PptItem
+          type="자료 감상 시간"
+          unit="초"
+          pptState={watchTime}
+          setPptState={setWatchTime}
+        />
       </Styled.PptTable>
     </Styled.Root>
   );
@@ -200,26 +146,5 @@ const Styled = {
     & > div:nth-of-type(6) {
       border: 0;
     }
-  `,
-  OperatorContainer: styled.div<{ operator: string }>`
-    display: flex;
-    position: relative;
-    align-items: center;
-    transform: translateY(12px);
-    cursor: pointer;
-    width: 15px;
-    height: 15px;
-  `,
-  HLine: styled.div`
-    background-color: #333333;
-    width: 15px;
-    height: 2px;
-  `,
-  VLine: styled.div`
-    position: absolute;
-    left: 6.5px;
-    background-color: #333333;
-    width: 2px;
-    height: 15px;
   `,
 };
