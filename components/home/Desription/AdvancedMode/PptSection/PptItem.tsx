@@ -36,11 +36,7 @@ function PptItem({ type, unit, pptState, setPptState }: Props) {
           <Styled.HLine />
         </Styled.OperatorContainer>
         <form onSubmit={(e) => e.preventDefault()}>
-          <input
-            type="number"
-            value={pptState}
-            onChange={(e) => handleChange(e)}
-          />{" "}
+          <input type="number" value={pptState} onChange={handleChange} />
           {unit}
         </form>
         <Styled.OperatorContainer
