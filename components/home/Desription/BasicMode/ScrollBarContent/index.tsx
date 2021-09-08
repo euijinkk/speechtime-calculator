@@ -3,13 +3,13 @@ import styled from "@emotion/styled";
 import ScrollBarContainer from "./ScrollBarContainer";
 import { responsiveSize } from "../../../../../lib/constants/size";
 import { useMobile } from "../../../../../hooks/DeviceType";
+import { useSetRecoilState } from "recoil";
+import { isAccordianOpenedState } from "../../../../../store";
 
-interface Props {
-  setIsAccordianOpened: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-function ScrollBarContent({ setIsAccordianOpened }: Props) {
+function ScrollBarContent() {
   const isMobile = useMobile();
+  const setIsAccordianOpened = useSetRecoilState(isAccordianOpenedState);
+
   return (
     <>
       <Styled.SpeedText>

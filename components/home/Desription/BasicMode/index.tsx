@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "@emotion/styled";
 
 import ScrollBarContent from "./ScrollBarContent";
 import SpeedContent from "./SpeedContent";
 import { responsiveSize } from "../../../../lib/constants/size";
 import { useMobile } from "../../../../hooks/DeviceType";
+import { useRecoilState } from "recoil";
+import { isAccordianOpenedState } from "../../../../store";
 
 function BasicMode() {
   const isMobile = useMobile();
-  const [isAccordianOpened, setIsAccordianOpened] = useState(false);
-  console.log(`isMobile`, isMobile);
+  const [isAccordianOpened, setIsAccordianOpened] = useRecoilState(
+    isAccordianOpenedState
+  );
+
   return (
     <Styled.Root>
       {isMobile && !isAccordianOpened ? (
@@ -19,7 +23,7 @@ function BasicMode() {
         </Styled.ClosedAccordian>
       ) : (
         <>
-          <ScrollBarContent setIsAccordianOpened={setIsAccordianOpened} />
+          <ScrollBarContent />
           <SpeedContent />
         </>
       )}
