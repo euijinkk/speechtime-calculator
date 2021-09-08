@@ -15,52 +15,6 @@ function PptSection() {
   const [pptTerm, setPptTerm] = useRecoilState(pptTermState);
   const [watchTime, setWatchTime] = useRecoilState(watchTimeState);
 
-  const handleClick = (type: string, operator: string) => {
-    // 함수명에 변수명을 동적으로 할당하는 방법은 무엇일까?
-    if (operator === "+") {
-      switch (type) {
-        case "pptNum":
-          setPptNum((prev) => prev + 1);
-          break;
-        case "pptTerm":
-          setPptTerm((prev) => prev + 1);
-          break;
-        case "watchTime":
-          setWatchTime((prev) => prev + 1);
-          break;
-      }
-    } else {
-      switch (type) {
-        case "pptNum":
-          pptNum > 0 && setPptNum((prev) => prev - 1);
-          break;
-        case "pptTerm":
-          pptTerm > 0 && setPptTerm((prev) => prev - 1);
-          break;
-        case "watchTime":
-          watchTime > 0 && setWatchTime((prev) => prev - 1);
-          break;
-      }
-    }
-  };
-
-  const handleChange = (
-    type: string,
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    switch (type) {
-      case "pptNum":
-        setPptNum(e.target.valueAsNumber);
-        break;
-      case "pptTerm":
-        setPptTerm(e.target.valueAsNumber);
-        break;
-      case "watchTime":
-        setWatchTime(e.target.valueAsNumber);
-        break;
-    }
-  };
-
   return (
     <Styled.Root>
       <Styled.PptText>

@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { colors } from "../../../../../lib/constants/colors";
-import { responsiveSize } from "../../../../../lib/constants/size";
 
 interface Props {
   type: string;
@@ -12,7 +10,6 @@ interface Props {
 
 function PptItem({ type, unit, pptState, setPptState }: Props) {
   const handleClick = (operator: string) => {
-    // 함수명에 변수명을 동적으로 할당하는 방법은 무엇일까?
     if (operator === "+") {
       setPptState((prev) => prev + 1);
     } else {
@@ -21,6 +18,9 @@ function PptItem({ type, unit, pptState, setPptState }: Props) {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.value === "" || e.target.valueAsNumber < 0) {
+      e.target.valueAsNumber = 0;
+    }
     setPptState(e.target.valueAsNumber);
   };
 
