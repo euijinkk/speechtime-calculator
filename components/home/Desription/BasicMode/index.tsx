@@ -23,7 +23,7 @@ function BasicMode() {
         </Styled.ClosedAccordian>
       ) : (
         <>
-          <ScrollBarContent setIsAccordianOpened={setIsAccordianOpened} />
+          <ScrollBarContent />
           <SpeedContent />
         </>
       )}
