@@ -21,6 +21,7 @@ function PptItem({ type, unit, pptState, setPptState }: Props) {
     if (e.target.value === "" || e.target.valueAsNumber < 0) {
       e.target.valueAsNumber = 0;
     }
+    e.target.valueAsNumber = parseInt(e.target.value, 10);
     setPptState(e.target.valueAsNumber);
   };
 
