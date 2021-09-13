@@ -25,10 +25,7 @@ function MyApp({ Component, pageProps }) {
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="발표시간 계산기" />
-        <meta
-          property="og:url"
-          content="https://speechtime-calculator-lime.vercel.app/"
-        />
+        <meta property="og:url" content="https://www.speechtime.co.kr" />
         <meta property="og:site_name" content="발표시간 계산기" />
         <meta
           property="og:description"
