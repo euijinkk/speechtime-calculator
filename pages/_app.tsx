@@ -39,7 +39,12 @@ function MyApp({ Component, pageProps }) {
           name="naver-site-verification"
           content="92201c6ea9780e1726878e46cbf4189b65dbfd04"
         />
-        {/* 네이버 SEo */}
+        {/* 네이버 SEO */}
+        <meta
+          name="google-site-verification"
+          content="8bJNAyokLD_M59AS8hBrw_8OoAKMN7KrmCViYGZavzg"
+        />
+        {/* Google SEO */}
       </Head>
       <Component {...pageProps} />
     </RecoilRoot>
