@@ -1,0 +1,3 @@
+Sitemap: https://www.speechtime.co.kr/sitemap.xml
+User-agent: *
+Allow: /
