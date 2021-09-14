@@ -35,6 +35,11 @@ function MyApp({ Component, pageProps }) {
           property="og:image"
           content="https://kyrics.s3.ap-northeast-2.amazonaws.com/kyrics_og_image.png"
         />
+        <meta
+          name="naver-site-verification"
+          content="92201c6ea9780e1726878e46cbf4189b65dbfd04"
+        />
+        {/* 네이버 SEo */}
       </Head>
       <Component {...pageProps} />
     </RecoilRoot>
