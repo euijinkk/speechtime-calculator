@@ -35,16 +35,32 @@ function MyApp({ Component, pageProps }) {
           property="og:image"
           content="https://kyrics.s3.ap-northeast-2.amazonaws.com/kyrics_og_image.png"
         />
+        {/* 네이버 SEO */}
         <meta
           name="naver-site-verification"
           content="92201c6ea9780e1726878e46cbf4189b65dbfd04"
         />
-        {/* 네이버 SEO */}
+        {/* Google SEO */}
         <meta
           name="google-site-verification"
           content="8bJNAyokLD_M59AS8hBrw_8OoAKMN7KrmCViYGZavzg"
         />
-        {/* Google SEO */}
+        {/* Global site tag (gtag.js) - Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-98MYW7S486"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+  
+            gtag('config', 'G-98MYW7S486');
+            `,
+          }}
+        />
       </Head>
       <Component {...pageProps} />
     </RecoilRoot>
