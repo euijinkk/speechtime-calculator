@@ -20,7 +20,7 @@ function Header() {
         }.svg`}
         alt="Logo"
       />
-      <Styled.SiteName>발표시간 - 계산기</Styled.SiteName>
+      <Styled.SiteName>발표 시간 - 계산기</Styled.SiteName>
     </Styled.Root>
   );
 }
