@@ -14,9 +14,7 @@ function Options() {
     <Styled.Root mode={mode}>
       <button onClick={() => setMode("Basic")}>Basic Mode</button>
       <button onClick={() => setMode("Advanced")}>Advanced Mode</button>
-      <div>
-        <button>{language}</button>
-      </div>
+      <div>{/* <button>{language}</button> */}</div>
       {/* dropdown은 따로 컴포넌트 분리할까? */}
     </Styled.Root>
   );
