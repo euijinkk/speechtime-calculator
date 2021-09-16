@@ -35,21 +35,27 @@ const Styled = {
       background-color: white;
       cursor: pointer;
       width: 18.5%;
+      max-width: 208px;
       height: 50px;
       text-align: center;
       line-height: 50px;
       color: ${colors.sub_navy};
+      font-size: 16px;
+
+      @media ${responsiveSize.horizontalTablet} {
+        font-size: 14px;
+      }
 
       @media ${responsiveSize.tablet} {
         flex: 1;
         min-width: 0px;
+        max-width: 1000px;
       }
 
       @media ${responsiveSize.mobile} {
         min-width: 277px;
         height: 45px;
         line-height: 45px;
-        font-size: 14px;
       }
     }
 
