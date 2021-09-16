@@ -34,8 +34,7 @@ const Styled = {
       border-radius: 10px;
       background-color: white;
       cursor: pointer;
-      width: 17.5%;
-      min-width: 277px;
+      width: 18.5%;
       height: 50px;
       text-align: center;
       line-height: 50px;
@@ -47,6 +46,7 @@ const Styled = {
       }
 
       @media ${responsiveSize.mobile} {
+        min-width: 277px;
         height: 45px;
         line-height: 45px;
         font-size: 14px;

@@ -44,6 +44,7 @@ const Styled = {
   `,
   SiteName: styled.h1`
     margin: 0;
+    letter-spacing: 0;
     color: ${colors.sub_navy};
     font-size: 32px;
     font-weight: bold;
