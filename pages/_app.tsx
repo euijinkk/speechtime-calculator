@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="og:image"
-          content="https://kyrics.s3.ap-northeast-2.amazonaws.com/kyrics_og_image.png"
+          content="https://postfiles.pstatic.net/MjAyMTA5MThfMjIz/MDAxNjMxOTczNjM5ODAz.rGScsiUaqguQ0DgrpHHhi3yhoDZOlpRZ0inLo4zB2_0g.dNg-GtYkFALhZE8NteYigyrtld-D_ql8QLtyMM7hhO0g.PNG.gytks4/speechtime_og.png?type=w966"
         />
         {/* 네이버 SEO */}
         <meta
