@@ -41,6 +41,9 @@ const Styled = {
       align-items: center;
       justify-content: center;
       border-radius: 10px;
+      @media ${responsiveSize.mobile} {
+        height: 48px;
+      }
     }
 
     div:nth-of-type(1) {
@@ -53,7 +56,9 @@ const Styled = {
       width: 60%;
     }
     @media ${responsiveSize.mobile} {
-      font-size: 14px;
+      height: 48px;
+      min-height: 0;
+      font-size: 16px;
     }
   `,
 };
