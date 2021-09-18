@@ -80,7 +80,7 @@ export default StopWatch;
 const Styled = {
   Time: styled.div`
     margin-bottom: 8px;
-    border: 1px solid ${colors.gray_light};
+    border: 2px solid ${colors.gray_light};
     border-radius: 10px;
     height: 48px;
     text-align: center;
