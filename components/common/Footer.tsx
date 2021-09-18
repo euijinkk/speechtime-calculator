@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styled from "@emotion/styled";
+import { colors } from "../../lib/constants/colors";
 
 function Footer() {
   return (
@@ -38,6 +39,7 @@ const Styled = {
     margin-top: 50px;
     padding-bottom: 32px;
     width: 100%;
+    color: ${colors.sub_navy};
     font-size: 12px;
   `,
   Top: styled.div`

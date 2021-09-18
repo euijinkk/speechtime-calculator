@@ -82,6 +82,7 @@ const Styled = {
       transition: opacity 0.2s;
       /* opacity: 0.7; Set transparency (for mouse-over effects on hover) */
       outline: none; /* Remove outline */
+      border: 0;
       /* height: 25px; Specified height */
       background: ${colors.sub_navy}; /* Grey background */
       width: 100%; /* Full-width */
@@ -91,6 +92,7 @@ const Styled = {
       &::-webkit-slider-thumb {
         -webkit-appearance: none; /* Override default look */
         appearance: none;
+        border: 0;
         /* height: 25px; */
         border-radius: 50%;
         background: ${colors.main_yellow}; /* Green background */
@@ -100,6 +102,7 @@ const Styled = {
       }
 
       &::-moz-range-thumb {
+        border: 0;
         /* height: 25px; */
         border-radius: 50%;
         background: #4caf50; /* Green background */
