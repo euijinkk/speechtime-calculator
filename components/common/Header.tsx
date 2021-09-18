@@ -31,8 +31,8 @@ const Styled = {
   Root: styled.header`
     display: flex;
     align-items: center;
-    margin-top: 24px;
-    margin-bottom: 22px;
+    margin-top: 30px;
+    margin-bottom: 24px;
     width: 100%;
     @media ${responsiveSize.mobile} {
       margin-top: 16px;
