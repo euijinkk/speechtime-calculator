@@ -61,6 +61,9 @@ const Styled = {
       width: 100%;
       height: 109px;
       resize: none;
+      &::placeholder {
+        color: ${colors.gray_placeholder};
+      }
       @media ${responsiveSize.mobile} {
         margin-bottom: 22px;
       }

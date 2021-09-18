@@ -4,4 +4,5 @@ export const colors = {
   sub_navy: "#2E4654",
   gray_light: "#F0F1F5",
   gray_dark: "#333333",
+  gray_placeholder: "#C4C4C4",
 };

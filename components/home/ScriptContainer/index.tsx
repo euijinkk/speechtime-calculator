@@ -7,6 +7,7 @@ import countBytes from "../../../lib/utils/countBytes";
 import countCharacters from "../../../lib/utils/countCharacters";
 import TimeResult from "./TimeResult";
 import { responsiveSize } from "../../../lib/constants/size";
+import { colors } from "../../../lib/constants/colors";
 
 function ScriptContainer() {
   const [wordsNum, setWordsNum] = useState(0);
@@ -74,6 +75,9 @@ const Styled = {
       width: 100%;
       height: 90%;
       resize: none;
+      &::placeholder {
+        color: ${colors.gray_placeholder};
+      }
 
       @media ${responsiveSize.horizontalTablet} {
         height: 390px;
