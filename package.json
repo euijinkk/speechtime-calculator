@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "@mui/material": "^5.0.0",
     "@types/jest": "^27.0.0",
     "@types/node": "^16.4.13",
     "@types/react": "^17.0.17",
