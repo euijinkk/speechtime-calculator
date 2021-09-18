@@ -29,7 +29,7 @@ const Styled = {
     grid-template-columns: repeat(1, 1fr 1.5fr);
     align-items: center;
     justify-content: center;
-    border: 1px solid ${colors.gray_light};
+    border: 2px solid ${colors.gray_light};
     border-radius: 10px;
     width: 100%;
     overflow: hidden;
