@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { responsiveSize } from "../../../lib/constants/size";
+import { colors } from "../../../lib/constants/colors";
 
 interface Props {
   wordsNum: number;
@@ -40,6 +41,7 @@ const Styled = {
     justify-content: flex-end;
     margin-right: 20px;
     white-space: nowrap;
+    color: ${colors.gray_dark};
     font-size: 14px;
     & > div {
       margin-right: 20px;
