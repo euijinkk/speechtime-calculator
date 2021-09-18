@@ -42,11 +42,14 @@ export default ScrollBarContainer;
 
 const Styled = {
   Root: styled.div`
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     margin-bottom: 36px;
-    border: 1px solid ${colors.gray_light};
+    border: 2px solid ${colors.gray_light};
     border-radius: 10px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     @media ${responsiveSize.mobile} {
       margin-bottom: 24px;
