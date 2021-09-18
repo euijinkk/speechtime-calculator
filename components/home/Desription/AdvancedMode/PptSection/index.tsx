@@ -50,8 +50,8 @@ export default PptSection;
 const Styled = {
   Root: styled.section``,
   PptText: styled.div`
-    margin-bottom: 22px;
-    line-height: 2;
+    margin-bottom: 12px;
+    line-height: 1.8;
     @media ${responsiveSize.mobile} {
       margin-bottom: 14px;
     }

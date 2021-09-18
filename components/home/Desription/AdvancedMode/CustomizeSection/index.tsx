@@ -68,6 +68,6 @@ const Styled = {
   `,
   CustomizeText: styled.div`
     margin-bottom: 12px;
-    line-height: 2;
+    line-height: 1.8;
   `,
 };

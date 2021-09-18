@@ -90,7 +90,7 @@ const Styled = {
 
     & ~ div {
       display: flex;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
 
       & > div {
         flex: 5;

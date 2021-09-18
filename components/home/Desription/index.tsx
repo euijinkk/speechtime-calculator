@@ -25,9 +25,9 @@ const Styled = {
     margin-right: 8px;
     border-radius: 10px;
     background-color: white;
-    padding: 0 16px;
+    padding: 0 25px;
     padding-top: 28px;
-    width: 484px;
+    width: 480px;
     /* height: 100%; */
     color: ${colors.gray_dark};
 
@@ -36,7 +36,7 @@ const Styled = {
       margin-bottom: 8px;
       padding-bottom: 32px;
       width: 100%;
-      min-width: 484px;
+      min-width: 480px;
     }
     /* 480~590 사이에서 min-width:484 때문에 화면이 뭉개지는 현상 해결 */
     @media (max-width: 590px) {

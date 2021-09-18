@@ -20,7 +20,7 @@ const Styled = {
   Root: styled.section``,
   StopWatchText: styled.div`
     margin-bottom: 10px;
-    line-height: 2;
+    line-height: 1.8;
     color: ${colors.gray_dark};
   `,
 };

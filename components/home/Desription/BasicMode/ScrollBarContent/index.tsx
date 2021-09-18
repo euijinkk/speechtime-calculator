@@ -32,7 +32,7 @@ const Styled = {
   SpeedText: styled.div`
     position: relative;
     margin-bottom: 14px;
-    line-height: 2;
+    line-height: 1.8;
 
     @media ${responsiveSize.mobile} {
       display: flex;
