@@ -7,7 +7,7 @@ function SpeedContent() {
   return (
     <>
       <Styled.TableText>
-        ∙ 말하는 속도와 문장/ PPT 사이의 간격과 시간을 고려해보세요.
+        •&nbsp; 말하는 속도와 문장/ PPT 사이의 간격과 시간을 고려해보세요.
       </Styled.TableText>
       <SpeedTable />
     </>

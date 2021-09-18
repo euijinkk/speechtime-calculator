@@ -18,7 +18,7 @@ function BasicMode() {
     <Styled.Root>
       {isMobile && !isAccordianOpened ? (
         <Styled.ClosedAccordian onClick={() => setIsAccordianOpened(true)}>
-          <div>∙ 말하는 속도를 지정해주세요.</div>
+          <div>•&nbsp; 말하는 속도를 지정해주세요.</div>
           <button />
         </Styled.ClosedAccordian>
       ) : (
