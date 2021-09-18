@@ -33,7 +33,7 @@ const Styled = {
     width: 100%;
     min-height: 64px;
     color: ${colors.sub_navy};
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
 
     div {

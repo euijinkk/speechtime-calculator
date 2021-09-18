@@ -51,7 +51,6 @@ const Styled = {
       }
 
       @media ${responsiveSize.mobile} {
-        min-width: 277px;
         height: 45px;
         line-height: 45px;
       }
