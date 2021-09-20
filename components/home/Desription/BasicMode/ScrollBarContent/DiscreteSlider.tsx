@@ -43,6 +43,9 @@ const Slider2 = styled(Slider)`
   .MuiSlider-thumb {
     /* box-shadow: none; */
     color: ${colors.main_yellow};
+    &::before {
+      box-shadow: none;
+    }
     /* &:hover {
       box-shadow: none;
     }
