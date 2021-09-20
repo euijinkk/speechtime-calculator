@@ -79,6 +79,10 @@ export default StopWatch;
 
 const Styled = {
   Time: styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 8px;
     border: 2px solid ${colors.gray_light};
     border-radius: 10px;
