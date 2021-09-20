@@ -40,6 +40,9 @@ const Styled = {
     width: 100%;
     max-width: 450px;
     font-size: 14px;
+    @media ${responsiveSize.mobile} {
+      font-size: 13px;
+    }
   `,
   ClosedAccordian: styled.div`
     display: flex;

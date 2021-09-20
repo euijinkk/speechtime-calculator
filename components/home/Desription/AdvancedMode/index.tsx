@@ -24,5 +24,9 @@ const Styled = {
     max-width: 450px;
     color: ${colors.gray_dark};
     font-size: 14px;
+
+    @media ${responsiveSize.mobile} {
+      font-size: 13px;
+    }
   `,
 };
