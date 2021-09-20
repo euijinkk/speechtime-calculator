@@ -35,8 +35,7 @@ const Styled = {
     @media ${responsiveSize.horizontalTablet} {
       margin-right: 0px;
       margin-bottom: 8px;
-      padding-bottom: ${({ isAccordianOpened }) =>
-        isAccordianOpened ? "32px" : "0px"};
+      padding-bottom: 32px;
       width: 100%;
       min-width: 480px;
     }
@@ -45,6 +44,13 @@ const Styled = {
       padding-top: ${({ isAccordianOpened }) =>
         isAccordianOpened ? "20px" : "0px"};
       min-width: 0px;
+    }
+
+    @media ${responsiveSize.mobile} {
+      padding: ${({ isAccordianOpened }) =>
+          isAccordianOpened ? "20px" : "0px"}
+        14px;
+      width: 100%;
     }
   `,
 };
