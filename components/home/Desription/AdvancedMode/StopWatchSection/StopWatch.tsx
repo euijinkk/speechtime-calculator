@@ -95,6 +95,7 @@ const Styled = {
     & ~ div {
       display: flex;
       margin-bottom: 22px;
+      font-size: 16px;
 
       & > div {
         flex: 5;
@@ -110,6 +111,7 @@ const Styled = {
       }
       @media ${responsiveSize.mobile} {
         margin-bottom: 16px;
+        font-size: 14px;
       }
     }
 
