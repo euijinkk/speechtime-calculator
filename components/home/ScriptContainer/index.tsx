@@ -72,7 +72,7 @@ const Styled = {
     textarea {
       outline: 0;
       border: 0;
-
+      border-radius: 10px;
       background-color: white;
       padding: 20px;
       padding-bottom: 100px;
