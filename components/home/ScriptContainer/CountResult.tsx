@@ -10,6 +10,7 @@ interface Props {
   charactersNum: number;
   charactersNumWithBlank: number;
 }
+
 function CountResult({
   wordsNum,
   bytesNum,
@@ -35,14 +36,19 @@ export default CountResult;
 const Styled = {
   Root: styled.div`
     display: flex;
-    position: absolute;
-    right: -20px;
-    bottom: 13px;
+    /* position: absolute; */
+    /* right: -20px; */
+    /* bottom: 13px; */
     justify-content: flex-end;
     margin-right: 20px;
+    margin-bottom: 12px;
     white-space: nowrap;
     color: ${colors.gray_dark};
     font-size: 14px;
+
+    & > div:nth-last-child(1) {
+      margin-right: 0px;
+    }
     & > div {
       margin-right: 20px;
     }
@@ -56,6 +62,8 @@ const Styled = {
     }
 
     @media ${responsiveSize.mobile} {
+      margin-right: 12px;
+      margin-bottom: 10px;
       font-size: 10px;
     }
   `,

@@ -60,15 +60,19 @@ const Styled = {
     height: 100%;
 
     & > div:nth-of-type(1) {
+      display: flex;
       position: relative;
+      flex-direction: column;
       margin-bottom: 8px;
+      border-radius: 10px;
+      background-color: white;
       height: 88%;
     }
 
     textarea {
       outline: 0;
       border: 0;
-      border-radius: 10px;
+
       background-color: white;
       padding: 20px;
       padding-bottom: 100px;
