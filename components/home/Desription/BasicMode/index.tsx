@@ -40,16 +40,13 @@ const Styled = {
     width: 100%;
     max-width: 450px;
     font-size: 14px;
-
-    @media ${responsiveSize.mobile} {
-      font-size: 12px;
-    }
   `,
   ClosedAccordian: styled.div`
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
-    transform: translateY(6px);
+    padding: 22px 0px;
     & > button {
       background-color: white;
       background-image: url("/assets/icons/arrowBottom.svg");
