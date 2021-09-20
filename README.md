@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 발표시간 계산기 (Speech time - Calculator)
 
-## Getting Started
+> ### 소개
 
-First, run the development server:
+- 발표 스크립트를 넣으면, 발표시간을 예측해주는 웹사이트입니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> ### 주요기능
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. 사용자가 개인의 말하기 속도, 발표환경에 맞게 조절할 수 있습니다.
+2. PPT 장수, PPT 사이의 쉼, 자료 감상 시간을 고려하여, 보다 정확하게 발표시간을 예측할 수 있습니다.
+3. 글자수 세기, 단어수 세기 기능을 제공합니다.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+> ### 시연영상
 
-## Learn More
+1. Basic Mode
 
-To learn more about Next.js, take a look at the following resources:
+![화면 기록 2021-09-19 오전 8 44 00](https://user-images.githubusercontent.com/24906022/133911519-ce8d9991-b6c3-4c1a-bc36-9d8fa948b9a3.gif)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Advanced Mode
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![화면 기록 2021-09-19 오전 9 13 29](https://user-images.githubusercontent.com/24906022/133911568-045e4841-43b0-40a4-9d5c-73ea08822918.gif)
 
-## Deploy on Vercel
+3. Responsive Web
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> ### 기술 스택
+
+- react
+- TypeScript
+- Next.js
+- recoil
+
+---
+
+> ### 프로젝트 구조
+
+---
