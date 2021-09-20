@@ -7,6 +7,7 @@ import { responsiveSize } from "../../../../lib/constants/size";
 import { useMobile } from "../../../../hooks/DeviceType";
 import { useRecoilState } from "recoil";
 import { isAccordianOpenedState } from "../../../../store";
+import useWindowSize from "../../../../hooks/useWindowSize";
 
 function BasicMode() {
   const isMobile = useMobile();
@@ -14,18 +15,25 @@ function BasicMode() {
     isAccordianOpenedState
   );
 
+  const isClient = typeof window === "object";
+  if (!isClient) return <>Loading...</>;
+
   return (
     <Styled.Root>
       {isMobile && !isAccordianOpened ? (
-        <Styled.ClosedAccordian onClick={() => setIsAccordianOpened(true)}>
+        <Styled.ClosedAccordian
+          isMobile={isMobile}
+          isAccordianOpened={isAccordianOpened}
+          onClick={() => setIsAccordianOpened(true)}
+        >
           <div>•&nbsp; 말하는 속도를 지정해주세요.</div>
-          <button />
+          <button className="down" />
         </Styled.ClosedAccordian>
       ) : (
-        <>
+        <Styled.Open isMobile={isMobile}>
           <ScrollBarContent />
           <SpeedContent />
-        </>
+        </Styled.Open>
       )}
     </Styled.Root>
   );
@@ -44,17 +52,25 @@ const Styled = {
       font-size: 13px;
     }
   `,
-  ClosedAccordian: styled.div`
-    display: flex;
+  ClosedAccordian: styled.div<{
+    isMobile: boolean;
+    isAccordianOpened: boolean;
+  }>`
+    display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
     position: relative;
     align-items: center;
     justify-content: space-between;
-    padding: 22px 0px;
-    & > button {
+    height: 63px;
+    .down {
       background-color: white;
       background-image: url("/assets/icons/arrowBottom.svg");
       width: 20px;
       height: 20px;
     }
+  `,
+  Open: styled.div<{
+    isMobile: boolean;
+  }>`
+    /* display: ${({ isMobile }) => (!isMobile ? "block" : "none")}; */
   `,
 };

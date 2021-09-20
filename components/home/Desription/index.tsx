@@ -41,12 +41,14 @@ const Styled = {
     }
     /* 480~590 사이에서 min-width:484 때문에 화면이 뭉개지는 현상 해결 */
     @media (max-width: 590px) {
-      padding-top: ${({ mode, isAccordianOpened }) =>
-        mode === "Basic" && isAccordianOpened ? "20px" : "0px"};
       min-width: 0px;
     }
 
     @media ${responsiveSize.mobile} {
+      /* padding: ${({ mode, isAccordianOpened }) =>
+        mode === "Basic" ? (isAccordianOpened ? "20px" : "0px") : "20px"}; */
+      padding: ${({ mode, isAccordianOpened }) =>
+        mode === "Basic" && !isAccordianOpened ? "0px" : "20px"};
       padding-right: 14px;
       padding-left: 14px;
       width: 100%;
