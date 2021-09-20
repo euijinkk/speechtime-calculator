@@ -51,6 +51,9 @@ const Styled = {
       color: ${colors.main_yellow};
       font-weight: bold;
     }
+    @media ${responsiveSize.mobile} {
+      padding: 0 12px;
+    }
   `,
   ScrollBar: styled.div`
     display: flex;
@@ -61,6 +64,7 @@ const Styled = {
     height: 52px;
 
     @media ${responsiveSize.mobile} {
+      padding: 0 12px;
       height: 44px;
     }
   `,
