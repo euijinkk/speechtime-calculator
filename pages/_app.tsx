@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
         <title>발표시간 계산기</title>
         <link rel="icon" href="/assets/images/mobileLogo.svg" />
         {/* 대표/선호 url 지정 */}
-        <link rel="canonical" href="ttps://www.speechtime.co.kr" />
+        <link rel="canonical" href="https://www.speechtime.co.kr" />
         <meta charSet="UTF-8" />
         <meta
           name="viewport"
