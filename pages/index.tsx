@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Head from "next/head";
 import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
 import Main from "../components/home/Main";
@@ -7,12 +8,17 @@ import { responsiveSize } from "../lib/constants/size";
 
 export default function Home() {
   return (
-    <Styled.Root>
-      <Header />
-      <Options />
-      <Main />
-      <Footer />
-    </Styled.Root>
+    <>
+      <Head>
+        <title>발표시간 계산기</title>
+      </Head>
+      <Styled.Root>
+        <Header />
+        <Options />
+        <Main />
+        <Footer />
+      </Styled.Root>
+    </>
   );
 }
 
