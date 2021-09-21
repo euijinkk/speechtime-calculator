@@ -17,12 +17,14 @@ function MyApp({ Component, pageProps }) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
         />
         <meta
-          name="description"
-          content="여러분의 발표 대본이 몇 분 걸리는지 궁금하다면?"
-        />
-        <meta
+          key="keywords"
           name="keywords"
           content="발표시간 계산기, 글자수세기, 단어수세기, PT시간 측정"
+        />
+        <meta
+          key="description"
+          name="description"
+          content="여러분의 발표 대본이 몇 분 걸리는지 궁금하다면?"
         />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <meta property="og:type" content="website" />
