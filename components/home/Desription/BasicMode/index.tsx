@@ -7,16 +7,12 @@ import { responsiveSize } from "../../../../lib/constants/size";
 import { useMobile } from "../../../../hooks/DeviceType";
 import { useRecoilState } from "recoil";
 import { isAccordianOpenedState } from "../../../../store";
-import useWindowSize from "../../../../hooks/useWindowSize";
 
 function BasicMode() {
   const isMobile = useMobile();
   const [isAccordianOpened, setIsAccordianOpened] = useRecoilState(
     isAccordianOpenedState
   );
-
-  const isClient = typeof window === "object";
-  if (!isClient) return <>Loading...</>;
 
   return (
     <Styled.Root>
