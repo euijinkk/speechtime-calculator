@@ -13,7 +13,7 @@ function BasicMode() {
   const [isAccordianOpened, setIsAccordianOpened] = useRecoilState(
     isAccordianOpenedState
   );
-
+  // dd
   return (
     <Styled.Root>
       {isMobile && !isAccordianOpened ? (
