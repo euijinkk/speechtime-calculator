@@ -18,13 +18,18 @@
 
 1. Basic Mode
 
-![화면 기록 2021-09-19 오전 8 44 00](https://user-images.githubusercontent.com/24906022/133911519-ce8d9991-b6c3-4c1a-bc36-9d8fa948b9a3.gif)
+![화면 기록 2021-10-11 오후 11 55 36](https://user-images.githubusercontent.com/24906022/136812043-1f69f5eb-8a65-48ed-bd93-3dac48c862d8.gif)
+
 
 2. Advanced Mode
 
-![화면 기록 2021-09-19 오전 9 13 29](https://user-images.githubusercontent.com/24906022/133911568-045e4841-43b0-40a4-9d5c-73ea08822918.gif)
+![화면 기록 2021-10-11 오후 11 57 11](https://user-images.githubusercontent.com/24906022/136812465-1620f585-8680-4bf5-be93-5b7508fa51f4.gif)
+
 
 3. Responsive Web
+
+![화면 기록 2021-10-11 오후 11 59 34](https://user-images.githubusercontent.com/24906022/136812554-e916917e-d0bb-48d6-865e-63750724e165.gif)
+
 
 <br />
 
@@ -34,9 +39,5 @@
 - TypeScript
 - Next.js
 - recoil
-
-<br />
-
-## 프로젝트 구조
 
 <br />
