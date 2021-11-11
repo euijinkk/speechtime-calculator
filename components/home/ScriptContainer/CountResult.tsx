@@ -36,15 +36,12 @@ export default CountResult;
 const Styled = {
   Root: styled.div`
     display: flex;
-    /* position: absolute; */
-    /* right: -20px; */
-    /* bottom: 13px; */
     justify-content: flex-end;
     margin-right: 20px;
     margin-bottom: 12px;
     white-space: nowrap;
     color: ${colors.gray_dark};
-    font-size: 14px;
+    font-size: 12px;
 
     & > div {
       margin-right: 20px;
@@ -60,16 +57,11 @@ const Styled = {
       white-space: normal;
     }
 
-    @media ${responsiveSize.tablet} {
-      font-size: 12px;
-    }
-
     @media ${responsiveSize.mobile} {
       flex-direction: column;
       align-items: flex-end;
       margin-right: 14px;
       margin-bottom: 12px;
-      font-size: 12px;
       & > div {
         margin-right: 0;
       }
