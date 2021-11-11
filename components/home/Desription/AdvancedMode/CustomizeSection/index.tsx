@@ -37,8 +37,8 @@ function CustomizeSection() {
   return (
     <Styled.Root>
       <Styled.CustomizeText>
-        •&nbsp; 20초동안 읽은 스크립트를 입력해주세요. 전체 스크립트의 발표
-        시간이 계산됩니다.
+        2. 20초동안 읽은 스크립트를 입력해주세요. 전체 스크립트의 발표 시간이
+        계산됩니다.
       </Styled.CustomizeText>
       <textarea
         placeholder="20초 동안 읽은 스크립트를 ‘정확히' 입력해주세요. "

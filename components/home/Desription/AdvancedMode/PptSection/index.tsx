@@ -18,8 +18,8 @@ function PptSection() {
   return (
     <Styled.Root>
       <Styled.PptText>
-        •&nbsp; PPT의 장수, 슬라이드 전환 시간, 자료 감상 시간이 전체 발표
-        시간에 합산됩니다.
+        3. PPT의 장수, 슬라이드 전환 시간, 자료 감상 시간이 전체 발표 시간에
+        합산됩니다.
       </Styled.PptText>
       <Styled.PptTable>
         <PptItem
