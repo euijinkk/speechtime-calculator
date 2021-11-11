@@ -32,8 +32,9 @@ const Styled = {
       border-radius: 10px;
       background-color: white;
       cursor: pointer;
-      width: 18.5%;
-      max-width: 208px;
+      width: 208px;
+      /* width: 18.5%; */
+      /* max-width: 208px; */
       height: 50px;
       text-align: center;
       line-height: 50px;

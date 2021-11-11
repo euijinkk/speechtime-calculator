@@ -52,11 +52,14 @@ const Styled = {
     isMobile: boolean;
     isAccordianOpened: boolean;
   }>`
-    display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
+    display: none;
     position: relative;
     align-items: center;
     justify-content: space-between;
     height: 63px;
+    @media ${responsiveSize.mobile} {
+      display: flex;
+    }
     .down {
       background-color: white;
       background-image: url("/assets/icons/arrowBottom.svg");
@@ -66,7 +69,5 @@ const Styled = {
   `,
   Open: styled.div<{
     isMobile: boolean;
-  }>`
-    /* display: ${({ isMobile }) => (!isMobile ? "block" : "none")}; */
-  `,
+  }>``,
 };
