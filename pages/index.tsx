@@ -32,7 +32,6 @@ const Styled = {
     padding: 0 44px;
     width: 100%;
     max-width: 1276px;
-    font-family: "Noto Sans KR";
 
     @media ${responsiveSize.mobile} {
       padding: 0 16px;

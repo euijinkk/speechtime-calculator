@@ -1,15 +1,49 @@
 @import "reset-css";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@300;400;500;600&display=swap");
+@font-face {
+  font-family: "Noto Sans CJK KR";
+  font-weight: 100;
+  font-style: normal;
+  src: url("./fonts/NotoSansKR-Light.woff2") format("woff2"),
+    url("./fonts/NotoSansKR-Light.woff") format("woff"),
+    url("./fonts/NotoSansKR-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans CJK KR";
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/NotoSansKR-Regular.woff2") format("woff2"),
+    url("./fonts/NotoSansKR-Regular.woff") format("woff"),
+    url("./fonts/NotoSansKR-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans CJK KR";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./fonts/NotoSansKR-Medium.woff2") format("woff2"),
+    url("./fonts/NotoSansKR-Medium.woff") format("woff"),
+    url("./fonts/NotoSansKR-Medium.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans CJK KR";
+  font-weight: bold;
+  font-style: normal;
+  src: url("./fonts/NotoSansKR-Bold.woff2") format("woff2"),
+    url("./fonts/NotoSansKR-Bold.woff") format("woff"),
+    url("./fonts/NotoSansKR-Bold.otf") format("truetype");
+}
 
 html,
 body {
   margin: 0;
   background-color: #f0f5fe;
   padding: 100px;
-  font-family: "Noto Sans KR";
+  font-family: "Noto Sans CJK KR";
 }
 * {
-  font-family: "Noto Sans KR";
+  font-family: "Noto Sans CJK KR";
 }
 a {
   text-decoration: none;

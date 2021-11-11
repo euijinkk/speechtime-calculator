@@ -87,10 +87,11 @@ const Styled = {
     border: 2px solid ${colors.gray_light};
     border-radius: 10px;
     height: 48px;
-    text-align: center;
-    line-height: 48px;
     color: ${colors.sub_navy};
     font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     & ~ div {
       display: flex;

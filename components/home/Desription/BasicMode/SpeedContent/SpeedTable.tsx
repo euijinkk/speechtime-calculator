@@ -35,21 +35,22 @@ const Styled = {
     overflow: hidden;
     color: ${colors.gray_dark};
 
-    div {
+    & > div {
       width: 100%;
       height: 100%;
-      text-align: center;
-      line-height: 39px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    div:nth-of-type(odd) {
+    & > div:nth-of-type(odd) {
       border-bottom: 2px solid white;
       background-color: ${colors.gray_light};
     }
-    div:nth-of-type(even) {
+    & > div:nth-of-type(even) {
       border-bottom: 2px solid ${colors.gray_light};
     }
-    div:nth-of-type(9),
-    div:nth-of-type(10) {
+    & > div:nth-of-type(9),
+    & > div:nth-of-type(10) {
       border: 0;
     }
     /* 넘치는 것을 hidden 함으로써, container의 border-radius가 item에 정확히 적용되도록 한다 */
