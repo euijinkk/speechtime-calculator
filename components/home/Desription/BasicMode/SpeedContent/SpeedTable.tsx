@@ -57,7 +57,6 @@ const Styled = {
 
     @media ${responsiveSize.mobile} {
       grid-template-rows: repeat(5, 36px);
-      line-height: 36px;
     }
   `,
 };

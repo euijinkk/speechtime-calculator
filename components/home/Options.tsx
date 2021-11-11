@@ -54,7 +54,6 @@ const Styled = {
 
       @media ${responsiveSize.mobile} {
         height: 48px;
-        line-height: 48px;
       }
     }
 

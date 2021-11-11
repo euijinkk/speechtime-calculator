@@ -104,10 +104,11 @@ const Styled = {
         cursor: pointer;
         height: 44px;
         text-align: center;
-        line-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @media ${responsiveSize.mobile} {
           height: 40px;
-          line-height: 40px;
         }
       }
       @media ${responsiveSize.mobile} {
