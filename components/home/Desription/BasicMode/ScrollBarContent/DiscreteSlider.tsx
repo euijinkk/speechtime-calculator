@@ -41,24 +41,13 @@ const Slider2 = styled(Slider)`
   color: ${colors.sub_navy};
   .MuiSlider-track,
   .MuiSlider-thumb {
-    /* box-shadow: none; */
     color: ${colors.main_yellow};
     &::before {
       box-shadow: none;
     }
-    /* &:hover {
-      box-shadow: none;
-    }
-    &:active {
-      box-shadow: none;
-    } */
   }
-  /* .css-eg0mwd-MuiSlider-thumb {
-    -webkit-transition: none;
-    transition: none;
+  .css-eg0mwd-MuiSlider-thumb:hover,
+  .css-eg0mwd-MuiSlider-thumb.Mui-focusVisible {
     box-shadow: none;
   }
-  .css-eg0mwd-MuiSlider-thumb:before {
-    box-shadow: none;
-  } */
 `;
