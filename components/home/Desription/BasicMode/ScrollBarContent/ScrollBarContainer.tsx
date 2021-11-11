@@ -42,12 +42,11 @@ const Styled = {
   CpmContainer: styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 20px;
     height: 48px;
-    div {
-      line-height: 48px;
-    }
-    div:nth-of-type(2) {
+
+    & > div:nth-of-type(2) {
       color: ${colors.main_yellow};
       font-weight: bold;
     }

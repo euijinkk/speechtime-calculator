@@ -18,8 +18,8 @@ function PptSection() {
   return (
     <Styled.Root>
       <Styled.PptText>
-        •&nbsp; PPT의 장수, 슬라이드 전환 시간, 자료 감상 시간이 전체 발표
-        시간에 합산됩니다.
+        3. PPT의 장수, 슬라이드 전환 시간, 자료 감상 시간이 전체 발표 시간에
+        합산됩니다.
       </Styled.PptText>
       <Styled.PptTable>
         <PptItem
@@ -62,7 +62,7 @@ const Styled = {
     grid-template-columns: repeat(1, 1fr 1.5fr);
     align-items: center;
     justify-content: center;
-    border: 1px solid ${colors.gray_light};
+    border: 2px solid ${colors.gray_light};
     border-radius: 10px;
     overflow: hidden;
     color: ${colors.gray_dark};
@@ -83,7 +83,9 @@ const Styled = {
       width: 100%;
       height: 100%;
       text-align: center;
-      line-height: 39px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     & > div:nth-of-type(odd) {
       border-bottom: 2px solid white;

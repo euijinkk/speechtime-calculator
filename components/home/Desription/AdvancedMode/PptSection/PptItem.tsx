@@ -35,10 +35,10 @@ function PptItem({ type, unit, pptState, setPptState }: Props) {
         >
           <Styled.HLine />
         </Styled.OperatorContainer>
-        <form onSubmit={(e) => e.preventDefault()}>
+        <Styled.Form onSubmit={(e) => e.preventDefault()}>
           <input type="number" value={pptState} onChange={handleChange} />
           {unit}
-        </form>
+        </Styled.Form>
         <Styled.OperatorContainer
           operator="right"
           onClick={() => handleClick("+")}
@@ -58,7 +58,6 @@ const Styled = {
     display: flex;
     position: relative;
     align-items: center;
-    transform: translateY(12px);
     cursor: pointer;
     width: 15px;
     height: 15px;
@@ -74,5 +73,13 @@ const Styled = {
     background-color: #333333;
     width: 2px;
     height: 15px;
+  `,
+  Form: styled.form`
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    & > input {
+      padding-top: 2px;
+    }
   `,
 };

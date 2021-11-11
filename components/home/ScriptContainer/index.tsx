@@ -67,32 +67,12 @@ const Styled = {
       border-radius: 10px;
       background-color: white;
       height: 88%;
-    }
-
-    textarea {
-      outline: 0;
-      border: 0;
-      border-radius: 10px;
-      background-color: white;
-      padding: 20px;
-      padding-bottom: 100px;
-      width: 100%;
-      height: 90%;
-      resize: none;
-      &::placeholder {
-        color: ${colors.gray_placeholder};
-      }
-
       @media ${responsiveSize.horizontalTablet} {
-        height: 390px;
+        height: 440px;
       }
       @media ${responsiveSize.mobile} {
-        font-size: 13px;
+        height: 390px;
       }
-    }
-
-    @media ${responsiveSize.horizontalTablet} {
-      height: 512px;
     }
   `,
   textareaContainer: styled.div`
@@ -100,8 +80,25 @@ const Styled = {
     background-color: white;
     width: 100%;
     height: 100%;
-    @media ${responsiveSize.horizontalTablet} {
-      height: 440px;
+    padding-bottom: 10px;
+    & > textarea {
+      outline: 0;
+      border: 0;
+      border-radius: 10px;
+      background-color: white;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      resize: none;
+      font-size: 14px;
+      &::placeholder {
+        color: ${colors.gray_placeholder};
+      }
+
+      @media ${responsiveSize.mobile} {
+        font-size: 13px;
+        padding-top: 16px;
+      }
     }
   `,
 };

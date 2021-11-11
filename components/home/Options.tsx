@@ -32,13 +32,15 @@ const Styled = {
       border-radius: 10px;
       background-color: white;
       cursor: pointer;
-      width: 18.5%;
-      max-width: 208px;
+      width: 208px;
+      /* width: 18.5%; */
+      /* max-width: 208px; */
       height: 50px;
-      text-align: center;
-      line-height: 50px;
       color: ${colors.sub_navy};
       font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       @media ${responsiveSize.horizontalTablet} {
         font-size: 14px;
@@ -51,8 +53,8 @@ const Styled = {
       }
 
       @media ${responsiveSize.mobile} {
-        height: 45px;
-        line-height: 45px;
+        height: 48px;
+        line-height: 48px;
       }
     }
 
