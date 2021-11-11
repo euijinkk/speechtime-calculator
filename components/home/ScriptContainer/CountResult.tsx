@@ -20,13 +20,13 @@ function CountResult({
 }: Props) {
   return (
     <Styled.Root>
-      <div>단어수 : {wordsNum}개</div>
       <div>
         공백 포함 : {charactersNumWithBlank}자/{bytesNumWithBlank}bytes
       </div>
       <div>
         공백 미포함 : {charactersNum}자/{bytesNum}bytes
       </div>
+      <div>단어수 : {wordsNum}개</div>
     </Styled.Root>
   );
 }
@@ -37,20 +37,14 @@ const Styled = {
   Root: styled.div`
     display: flex;
     justify-content: flex-end;
-    margin-right: 20px;
+    margin-right: 26px;
     margin-bottom: 12px;
     white-space: nowrap;
     color: ${colors.gray_dark};
     font-size: 12px;
 
-    & > div {
-      margin-right: 20px;
-    }
-
-    @media (min-width: 480px) {
-      & > div:nth-last-child(1) {
-        margin-right: 0px;
-      }
+    & > div + div {
+      margin-left: 14px;
     }
 
     @media (max-width: 1020px) and (min-width: 900px) {
@@ -58,15 +52,14 @@ const Styled = {
     }
 
     @media ${responsiveSize.mobile} {
-      flex-direction: column;
+      flex-direction: column-reverse;
+
       align-items: flex-end;
       margin-right: 14px;
       margin-bottom: 12px;
-      & > div {
-        margin-right: 0;
-      }
+
       & > div + div {
-        margin-top: 6px;
+        margin-bottom: 6px;
       }
     }
   `,
