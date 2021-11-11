@@ -67,6 +67,12 @@ const Styled = {
       border-radius: 10px;
       background-color: white;
       height: 88%;
+      @media ${responsiveSize.horizontalTablet} {
+        height: 440px;
+      }
+      @media ${responsiveSize.mobile} {
+        height: 390px;
+      }
     }
   `,
   textareaContainer: styled.div`
@@ -89,17 +95,10 @@ const Styled = {
         color: ${colors.gray_placeholder};
       }
 
-      /* @media ${responsiveSize.horizontalTablet} {
-        height: 390px;
-      } */
       @media ${responsiveSize.mobile} {
         font-size: 13px;
         padding-top: 16px;
       }
-    }
-
-    @media ${responsiveSize.horizontalTablet} {
-      height: 440px;
     }
   `,
 };
