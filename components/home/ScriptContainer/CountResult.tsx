@@ -67,9 +67,15 @@ const Styled = {
     @media ${responsiveSize.mobile} {
       flex-direction: column;
       align-items: flex-end;
-      margin-right: 12px;
-      margin-bottom: 10px;
-      font-size: 10px;
+      margin-right: 14px;
+      margin-bottom: 12px;
+      font-size: 12px;
+      & > div {
+        margin-right: 0;
+      }
+      & > div + div {
+        margin-top: 6px;
+      }
     }
   `,
 };
