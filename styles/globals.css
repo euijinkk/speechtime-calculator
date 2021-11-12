@@ -40,10 +40,9 @@ body {
   margin: 0;
   background-color: #f0f5fe;
   padding: 100px;
-  font-family: "Noto Sans CJK KR";
 }
 * {
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans CJK KR" !important;
 }
 a {
   text-decoration: none;
