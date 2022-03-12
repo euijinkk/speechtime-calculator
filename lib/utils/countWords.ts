@@ -1,11 +1,5 @@
-import isWord from "../../lib/utils/isWord";
-
 export default function countWords(text: string) {
-  let wordCount = 0;
-  let arr = text.trim().split(/\s+/);
+  if (!text.trim()) return 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    isWord(arr[i]) && wordCount++;
-  }
-  return wordCount;
+  return text.trim().split(/\s+/).length;
 }
