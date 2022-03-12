@@ -20,15 +20,16 @@ export const useSpeechTime = (text: string) => {
 
   if (mode === "Basic") {
     return splitMinAndSec((length / cpmNum) * 60, cpmNum);
-  } else {
-    if (!cpmNum2) {
-      return "위 순서를 따라해보세요.";
-    }
-    return splitMinAndSec(
-      (length / cpmNum2) * 60 + pptNum * pptTerm + watchTime,
-      cpmNum2
-    );
   }
+
+  if (!cpmNum2) {
+    return "위 순서를 따라해보세요.";
+  }
+
+  return splitMinAndSec(
+    (length / cpmNum2) * 60 + pptNum * pptTerm + watchTime,
+    cpmNum2
+  );
 };
 
 function splitMinAndSec(speechTime: number, cpm: number): string {
